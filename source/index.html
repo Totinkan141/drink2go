@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <title>Интернет-магазин кофейных напитков - Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -67,6 +67,124 @@
       </nav>
     </div>
   </header>
+
+  <!-- Подвал сайта -->
+  <footer class="page-footer">
+    <div class="footer__container">
+      <!-- Здесь лежит логотип и социльные контакты -->
+      <div class="page-footer__contacts social">
+        <a class="page-footer__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/logos/logo-full.svg">
+            <img src="./img/logos/logo-short.svg" width="82" height="36" alt="Drink2Go">
+          </picture>
+        </a>
+
+        <!-- Список социльаных контактов -->
+        <ul class="page-footer__social-links social-links">
+          <li class="social-links__link">
+            <span class="visually-hidden">Наша группа в&nbsp;ВК</span>
+            <svg class="social-links__icon" width="20" height="20">
+              <use xlink:href="img/icons/stack.svg#vk-icon"></use>
+            </svg>
+          </li>
+          <li class="social-links__link">
+            <span class="visually-hidden">Наш Pinterest</span>
+            <svg class="social-links__icon" width="22" height="22">
+              <use xlink:href="img/icons/stack.svg#pinterest-icon"></use>
+            </svg>
+          </li>
+          <li class="social-links__link">
+            <span class="visually-hidden">Наша группа в&nbsp;ОК</span>
+            <svg class="social-links__icon" width="20" height="20">
+              <use xlink:href="img/icons/stack.svg#ok-icon"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Блоки информации в подвале -->
+      <div class="page-footer__blocks-group">
+
+        <!-- Блок Интернет-магазин  -->
+        <div class="page-footer__item page-footer__item--e-shop">
+          <h4 class="page-footer__header">
+            <a block__link href="">Интернет-магазин</a>
+          </h4>
+          <ul class="page-footer__list">
+            <li class="page-footer__inner-item">
+              <a href="#">Каталог</a>
+            </li>
+            <li class="page-footer__inner-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="page-footer__inner-item">
+              <a href="#">Способы оплаты</a>
+            </li>
+            <li class="page-footer__inner-item">
+              <a href="#">О нас</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Блок Медиа  -->
+        <div class="page-footer__item page-footer__item--media">
+          <h4 class="page-footer__header">
+            <a block__link href="">Медиа</a>
+          </h4>
+          <ul class="page-footer__list">
+            <li class="page-footer__inner-item">
+              <a href="#">Блог</a>
+            </li>
+            <li class="page-footer__inner-item">
+              <a href="#">Информация для СМИ</a>
+            </li>
+            <li class="page-footer__inner-item">
+              <a href="#">Правовая информация</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Блок Контакты  -->
+        <div class="page-footer__item page-footer__item--media">
+          <h4 class="page-footer__header">
+            <a block__link href="">Контакты</a>
+          </h4>
+          <ul class="page-footer__list">
+            <li class="page-footer__inner-item">
+              <a href="#">
+                <svg class="social-links__icon" width="13" height="16">
+                  <use xlink:href="img/icons/stack.svg#address-icon"></use>
+                </svg>
+                <span>
+                  Санкт-Петербург, набережная реки Карповки, дом 5
+                </span>
+              </a>
+            </li>
+            <li class="page-footer__inner-item">
+              <a href="tel:79999999999">
+                <svg class="social-links__icon" width="13" height="16">
+                  <use xlink:href="img/icons/stack.svg#phone-icon"></use>
+                </svg>
+                <span>+7 (999) 999-99-99</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Разработано HTML Academy -->
+      <div class="page-footer__developed-by">
+        <span>Разработано в</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <span>HTML Academy</span>
+          <svg class="" width="12" height="16">
+            <use xlink:href="img/icons/stack.svg#htmlacademy-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
   <script src="./js/script.js" defer></script>
 </body>
 
