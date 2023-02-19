@@ -6,6 +6,12 @@
 
 .social__logo {
   margin-right: 38px;
+
+  @media (min-width: $tabletWidth) {
+    img {
+      width: 170px;
+    }
+  }
 }
 
 .social__logo-subtitle {
