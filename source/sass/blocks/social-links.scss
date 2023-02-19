@@ -11,6 +11,10 @@
     gap: 20px;
     justify-content: end;
   }
+
+  @media (min-width: $desktopWidth) {
+    justify-content: start;
+  }
 }
 
 .social-links__link {

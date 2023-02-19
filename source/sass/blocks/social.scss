@@ -12,12 +12,26 @@
       width: 170px;
     }
   }
+
+  @media (min-width: $desktopWidth) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    gap: 6px;
+  }
 }
 
 .social__logo-subtitle {
   @media (max-width: $tabletOnly) {
     @include visually-hidden;
   }
+
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $baseBlack;
 }
 
 .social__links {
