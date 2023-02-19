@@ -1,4 +1,5 @@
 /* в этот файл добавляет скрипты */
+
 const navMain = document.querySelector(".navigation");
 
 if (navMain.classList.contains("navigation--nojs")) {
@@ -16,3 +17,5 @@ navToggle.addEventListener("click", function () {
     navMain.classList.add("navigation--closed");
   }
 });
+
+

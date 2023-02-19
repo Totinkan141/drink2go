@@ -6,6 +6,8 @@
   <title>Интернет-магазин кофейных напитков - Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+
 </head>
 
 <body>
@@ -20,7 +22,7 @@
         </picture>
         <h1 class="header__subtitle">Интернет-магазин кофейных напитков</h1>
       </a>
-      <nav class="navigation navigation--nojs navigation--secondary navigation--closed">
+      <nav class="navigation navigation--secondary navigation--closed navigation--nojs">
         <ul class="navigation__list">
           <li class="navigation__item navigation__item--user-enter">
             <a class="navigation__link" href="user-enter.html">
@@ -29,7 +31,6 @@
           </li>
           <li class="navigation__item navigation__item--user-cart">
             <a class="navigation__link" href="user-cart.html">
-
               <span>Корзина</span>
             </a>
           </li>
@@ -67,7 +68,26 @@
       </nav>
     </div>
   </header>
-
+  <main class="page-main">
+    <!-- Здесь подключается карта при помощи leaflet -->
+    <div class="page-main__map map map--nojs" >
+      <div id="mapid">
+      </div>
+      <div class="map__container">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="./img/map/map-desktop@1x.webp 1x, ./img/map/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="./img/map/map-tablet@1x.webp 1x, ./img/map/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/map/map-mobile@1x.webp 1x, ./img/map/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="./img/map/map-desktop@1x.png 1x, ./img/map/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="./img/map/map-tablet@1x.png 1x, ./img/map/map-tablet@2x.png 2x">
+          <img src="./img/map/map-mobile@1x.png" srcset="./img/map/map-mobile@1x.png 1x, ./img/map/map-mobile@2x.png 2x"
+            alt="Офис компании Drink2Go по адресу набережная реки Карповки, 5П, Санкт-Петербург" width="320xp" height="420">
+        </picture>
+      </div>
+    </div>
+  </main>
   <!-- Подвал сайта -->
   <footer class="page-footer">
     <div class="page-footer__container">
@@ -173,9 +193,8 @@
           </ul>
         </div>
       </div>
-
       <!-- Разработано HTML Academy -->
-      <div  class="page-footer_developed-by developed-by">
+      <div class="page-footer_developed-by developed-by">
         <span class="developed-by__text">
           Разработано в
         </span>
@@ -189,6 +208,8 @@
     </div>
   </footer>
   <script src="./js/script.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="./js/map.js"></script>
 </body>
 
 </html>
