@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- Шапка старинцы -->
-    <header class="header">
-      <div class="header__container">
-        <a class="header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="./img/logos/logo-full.svg">
-            <source media="(min-width: 768px)" srcset="./img/logos/logo-short.svg">
-            <img src="./img/logos/logo-symbol.svg"  width="32" height="36" alt="Drink2Go">
-          </picture>
-          <h1 class="header__subtitle">Интернет-магазин кофейных напитков</h1>
-        </a>
-        <!-- Сюда добавляются классы в зависимоти от которых будет показываться главная навигация
+
+<head>
+  <meta charset="UTF-8">
+  <title>Название проекта</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Шапка старинцы -->
+  <header class="header">
+    <div class="header__container">
+      <a class="header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./img/logos/logo-full.svg">
+          <source media="(min-width: 768px)" srcset="./img/logos/logo-short.svg">
+          <img src="./img/logos/logo-symbol.svg" width="32" height="36" alt="Drink2Go">
+        </picture>
+        <h1 class="header__subtitle">Интернет-магазин кофейных напитков</h1>
+      </a>
+      <!-- Сюда добавляются классы в зависимоти от которых будет показываться главная навигация
         navigation--nojs сразу отображает основную навигацию и даёт ей свойства блока
         navigation--opened говорит о том, что главная навигация показана
         navigation--closed говорит о том, что главная навигация скрыта -->
-        <nav class="navigation navigation--nojs navigation--secondary navigation--closed">
-          <ul class="navigation__list">
-            <li class="navigation__item navigation__item--user-enter">
-              <a class="navigation__link" href="user-enter.html">
-                <span>Войти</span>
-              </a>
-            </li>
-            <li class="navigation__item navigation__item--user-cart">
-              <a class="navigation__link" href="user-cart.html">
-                
-                <span>Корзина</span>
-              </a>
-            </li>
-          </ul>
-          <!-- Бургер кнопка -->
-          <button class="navigation__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </nav>
+      <nav class="navigation navigation--nojs navigation--secondary navigation--closed">
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__item--user-enter">
+            <a class="navigation__link" href="user-enter.html">
+              <span>Войти</span>
+            </a>
+          </li>
+          <li class="navigation__item navigation__item--user-cart">
+            <a class="navigation__link" href="user-cart.html">
 
-        <!-- Главная/основаная навигация -->
-        <nav class="navigation navigation--main ">
-          <ul class="navigation__list navigation__list--main">
-            <li class="navigation__item">
-              <a href="#" class="navigation__link navigation__link--current">
-                Главная
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link">
-                Каталог
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="delivery.html" class="navigation__link">
-                Доставка
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="about.html" class="navigation__link">
-                О нас
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+              <span>Корзина</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Бургер кнопка -->
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </nav>
 
-    <script src="./js/script.js" defer></script>
-  </body>
+      <!-- Главная/основаная навигация -->
+      <nav class="navigation navigation--main ">
+        <ul class="navigation__list navigation__list--main">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link navigation__link--current">
+              Главная
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="catalog.html" class="navigation__link">
+              Каталог
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="delivery.html" class="navigation__link">
+              Доставка
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="about.html" class="navigation__link">
+              О нас
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <script src="./js/script.js" defer></script>
+</body>
+
 </html>
