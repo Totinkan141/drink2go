@@ -8,6 +8,11 @@
   width: $mobileStart;
   background-color: $baseWhite;
   padding: 0 0 20px;
+
+  @media (min-width: $tabletWidth) {
+    width: $tabletWidth;
+    padding: 0;
+  }
 }
 
 .page-footer__container {
@@ -15,6 +20,11 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+
+  @media (min-width: $tabletWidth) {
+    width: $tabletWidth;
+    padding: 0 20px;
+  }
 }
 
 /* Расположение блока социальных контактов */
@@ -24,18 +34,35 @@
   flex-direction: row;
   justify-content: space-between;
   border-bottom: solid 1px $baseSecondary;
+
+  @media (min-width: $tabletWidth) {
+    padding: 40px 0 27px;
+    border: none;
+  }
 }
 
 .page-footer__blocks-group {
   display: flex;
   flex-direction: column;
   width: $mobileStart;
+
+  @media (min-width: $tabletWidth) {
+    width: 728px;
+    display: grid;
+    grid-template-columns: 223px 222px 223px;
+    gap: 30px;
+  }
 }
 
 .page-footer__item {
   width: 100%;
   padding: 20px 20px 16px;
   border-bottom: solid 1px $baseSecondary;
+
+  @media (min-width: $tabletWidth) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .page-footer__item-header {
@@ -86,5 +113,9 @@
 
 .page-footer__developed-by {
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 16px 0 10px;
+
+  @media (min-width: $tabletWidth) {
+    padding: 23px 0;
+  }
 }
