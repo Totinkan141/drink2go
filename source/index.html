@@ -72,16 +72,17 @@
   <footer class="page-footer">
     <div class="page-footer__container">
       <!-- Здесь лежит логотип и социльные контакты -->
-      <div class="page-footer__contacts social">
-        <a class="page-footer__logo" href="index.html">
+      <div class="page-footer__social social">
+        <a class="social__logo" href="index.html">
           <picture>
             <source media="(min-width: 768px)" srcset="./img/logos/logo-full.svg">
             <img src="./img/logos/logo-short.svg" width="82" height="36" alt="Drink2Go">
           </picture>
+          <h4 class="social__logo-subtitle">Интернет-магазин кофейных напитков</h4>
         </a>
 
         <!-- Список социльаных контактов -->
-        <ul class="page-footer__social-links social-links">
+        <ul class="social-links">
           <li class="social-links__link">
             <span class="visually-hidden">Наша группа в&nbsp;ВК</span>
             <svg class="social-links__icon" width="20" height="20">
@@ -108,7 +109,7 @@
 
         <!-- Блок Интернет-магазин  -->
         <div class="page-footer__item page-footer__item--e-shop">
-          <h4 class="page-footer__header">
+          <h4 class="page-footer__item-header">
             <a class="page-footer__item-title" href="">Интернет-магазин</a>
           </h4>
           <ul class="page-footer__list">
@@ -129,7 +130,7 @@
 
         <!-- Блок Медиа  -->
         <div class="page-footer__item page-footer__item--media">
-          <h4 class="page-footer__header">
+          <h4 class="page-footer__item-header">
             <a class="page-footer__item-title" href="">Медиа</a>
           </h4>
           <ul class="page-footer__list">
@@ -146,27 +147,27 @@
         </div>
 
         <!-- Блок Контакты  -->
-        <div class="page-footer__item page-footer__item--media">
-          <h4 class="page-footer__header">
+        <div class="page-footer__item footer-contacts">
+          <h4 class="page-footer__item-header footer-contacts__header">
             <a class="page-footer__item-title" href="">Контакты</a>
           </h4>
           <ul class="page-footer__list">
-            <li class="page-footer__inner-item">
+            <li class="page-footer__inner-item footer-contacts__item">
               <a href="#">
-                <svg width="13" height="16">
+                <svg class="footer-contacts__icon" width="13" height="16">
                   <use xlink:href="img/icons/stack.svg#address-icon"></use>
                 </svg>
-                <span>
+                <span class="footer-contacts__text">
                   Санкт-Петербург, набережная реки Карповки, дом 5
                 </span>
               </a>
             </li>
-            <li class="page-footer__inner-item">
+            <li class="page-footer__inner-item footer-contacts__item">
               <a href="tel:79999999999">
-                <svg width="13" height="16">
+                <svg class="footer-contacts__icon" width="13" height="16">
                   <use xlink:href="img/icons/stack.svg#phone-icon"></use>
                 </svg>
-                <span>+7 (999) 999-99-99</span>
+                <span class="footer-contacts__text">+7 (999) 999-99-99</span>
               </a>
             </li>
           </ul>
@@ -174,11 +175,13 @@
       </div>
 
       <!-- Разработано HTML Academy -->
-      <div class="page-footer__developed-by">
-        <span>Разработано в</span>
-        <a href="https://htmlacademy.ru/intensive/adaptive">
-          <span>HTML Academy</span>
-          <svg  width="12" height="16">
+      <div  class="page-footer_developed-by developed-by">
+        <span class="developed-by__text">
+          Разработано в
+        </span>
+        <a class="developed-by__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="developed-by__name">HTML Academy</span>
+          <svg class="developed-by__icon" width="12" height="16">
             <use xlink:href="img/icons/stack.svg#htmlacademy-icon"></use>
           </svg>
         </a>

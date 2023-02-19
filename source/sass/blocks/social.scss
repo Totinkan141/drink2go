@@ -1,0 +1,22 @@
+.social {
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+}
+
+.social__logo {
+  margin-right: 38px;
+}
+
+.social__logo-subtitle {
+  @media (max-width: $tabletOnly) {
+    @include visually-hidden;
+  }
+}
+
+.social__links {
+  @include reset-list;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
