@@ -1,0 +1,90 @@
+/* Стилизация футера сайта */
+.page-footer {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: $mobileStart;
+  background-color: $baseWhite;
+  padding: 20px 0;
+}
+
+.page-footer__container {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* Расположение блока социальных контактов */
+.page-footer__social {
+  padding: 19px 20px 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid 1px $baseSecondary;
+}
+
+.page-footer__blocks-group {
+  display: flex;
+  flex-direction: column;
+  width: $mobileStart;
+}
+
+.page-footer__item {
+  width: 100%;
+  padding: 20px 20px 16px;
+  border-bottom: solid 1px $baseSecondary;
+}
+
+.page-footer__item-header {
+  margin: 0;
+  padding: 0;
+  min-height: 20px;
+  margin-bottom: 12px;
+}
+
+.page-footer__item-title {
+  font-weight: 700;
+  color: $basePrimary;
+  letter-spacing: 0.02em;
+}
+
+.page-footer__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.page-footer__inner-item {
+  min-height: 32px;
+  padding: 5px 0;
+  margin-bottom: 4px;
+
+  a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $baseBlack;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      color: $primaryLighter;
+    }
+
+    &:active {
+      color: $primaryDarker;
+    }
+  }
+}
+
+.page-footer__developed-by {
+  margin: 0 auto;
+  padding: 20px 0;
+}

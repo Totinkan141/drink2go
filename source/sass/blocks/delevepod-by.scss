@@ -1,0 +1,32 @@
+.developed-by {
+  color: $baseGrey;
+  margin: 0 auto;
+  padding: 16px 0 10px;
+  vertical-align: baseline;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+
+.developed-by__icon {
+  position: relative;
+  top: 4px;
+}
+
+.developed-by__copyright {
+  position: relative;
+  color: $baseGrey;
+
+  &:hover ~ .developed-by__icon,
+  &:focus ~ .developed-by__icon {
+    color: $basePrimary;
+  }
+
+  &:active ~ .developed-by__icon {
+    color: $primaryDarker;
+  }
+}
+
+.developed-by__text {
+  color: $baseGrey;
+}

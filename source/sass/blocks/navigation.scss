@@ -9,7 +9,9 @@
   /*  Главная навигация */
   &--main {
     width: $mobileStart;
+    background-color: $baseWhite;
     position: absolute;
+    z-index: 5;
     top: 60px;
   }
 

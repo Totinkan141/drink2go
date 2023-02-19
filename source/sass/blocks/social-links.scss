@@ -1,0 +1,29 @@
+.social-links {
+  @include reset-list;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.social-links__link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $baseGrey;
+
+  &:hover,
+  &:focus {
+    background-color: $baseSecondary;
+    color: $basePrimary;
+  }
+
+  &:active {
+    background-color: rgba($basePrimary, 0.25);
+    color: $basePrimary;
+  }
+}
