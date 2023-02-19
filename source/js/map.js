@@ -22,6 +22,3 @@ let myMap = L.map('mapid').setView([59.96832, 30.31749], 19);
   }
 
   let marker = L.marker([59.96832, 30.31756], customMarker).addTo(myMap);
-
-
-
