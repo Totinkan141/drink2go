@@ -1,0 +1,85 @@
+.map {
+  display: block;
+  min-width: $mobileStart;
+  max-width: $mobileOnly;
+  height: 420px;
+  margin-bottom: 0;
+  padding: 0;
+
+  > .mapid {
+    width: 100%;
+    height: 100%;
+  }
+
+  picture {
+    display: none;
+  }
+
+  @media (min-width: $tabletWidth) {
+    height: 480px;
+    min-width: $tabletWidth;
+    max-width: $tabletOnly;
+  }
+
+  @media (min-width: $desktopWidth) {
+    height: 540px;
+    min-width: $desktopWidth;
+    max-width: 100%;
+  }
+}
+
+.map--nojs {
+  picture {
+    display: block;
+    margin: 0 auto;
+  }
+
+  img {
+    display: block;
+    width: $mobileStart;
+  }
+
+  > .mapid {
+    display: none;
+  }
+
+  @media (min-width: $tabletWidth) {
+    img {
+      width: $tabletWidth;
+      height: 480px;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    img {
+      width: $desktopWidth;
+      height: 540px;
+    }
+  }
+}
+
+.map__container {
+  width: $mobileStart;
+  display: flex;
+  margin: 0 auto;
+
+  picture {
+    width: $mobileStart;
+  }
+
+  @media (min-width: $tabletWidth) {
+    width: $tabletWidth;
+
+    picture {
+      width: $tabletWidth;
+    }
+  }
+
+  @media (min-width: $desktopWidth) {
+    width: $desktopWidth;
+
+    picture {
+      width: $desktopWidth;
+    }
+  }
+}

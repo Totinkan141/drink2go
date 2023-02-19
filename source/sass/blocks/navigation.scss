@@ -289,3 +289,11 @@
     }
   }
 }
+
+.navigation--nojs.navigation--opened {
+  ~ .navigation--main {
+    display: block;
+    position: relative;
+    top: 0;
+  }
+}

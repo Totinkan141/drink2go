@@ -1,4 +1,5 @@
 /* в этот файл добавляет скрипты */
+
 const navMain = document.querySelector(".navigation");
 
 if (navMain.classList.contains("navigation--nojs")) {
