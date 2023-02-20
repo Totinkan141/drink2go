@@ -23,9 +23,13 @@
   font-size: 24px;
   line-height: 1.5;
   color: $baseBlack;
+
+  @media (min-width: $tabletWidth) {
+    font-size: 42px;
+    line-height: 1.52;
+  }
 }
 
 .page-main__advantages {
   margin: 0 auto;
 }
-
