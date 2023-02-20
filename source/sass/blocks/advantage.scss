@@ -9,6 +9,11 @@
     gap: 20px;
     align-items: start;
   }
+
+  @media (min-width: $desktopWidth) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .advantage__info {
@@ -19,6 +24,11 @@
   @media (min-width: $tabletWidth) {
     align-items: start;
     gap: 10px;
+  }
+
+  @media (min-width: $desktopWidth) {
+    align-items: center;
+    gap: 12px;
   }
 }
 
@@ -49,6 +59,10 @@
     font-size: 16px;
     line-height: 1.5;
     text-align: start;
+  }
+
+  @media (min-width: $desktopWidth) {
+    text-align: center;
   }
 }
 

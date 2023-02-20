@@ -17,6 +17,12 @@
     gap: 60px;
     padding: 50px 30px 60px;
   }
+
+  @media (min-width: $desktopWidth) {
+    width: $desktopWidth;
+    padding: 50px 40px 60px;
+    gap: 78px;
+  }
 }
 
 .advantages__header {
@@ -24,6 +30,10 @@
   flex-direction: column;
   text-align: center;
   gap: 4px;
+
+  @media (min-width: $desktopWidth) {
+    gap: 6px;
+  }
 }
 
 .advantages__list {
@@ -37,5 +47,9 @@
     grid-template-columns: 339px 339px;
     column-gap: 30px;
     row-gap: 50px;
+  }
+
+  @media (min-width: $desktopWidth) {
+    grid-template-columns: 318px 317px 318px 318px;
   }
 }
