@@ -6,14 +6,24 @@
 @import "mixin/visually-hidden";
 @import "mixin/reset-list";
 
-/* BLOCKS */
+/* ====================== Header =======================*/
 @import "blocks/header";
 @import "blocks/navigation";
+
+/* ====================== Main ======================== */
+@import "blocks/page-main";
+
+/* ======= Main block advantages ======== */
+@import "blocks/advantages";
+@import "blocks/advantage";
+
+/* = Main block interactive map Leaflet = */
 @import "blocks/map";
-/* ====================== Footer ======================== */
+
+/* ====================== Footer ====================== */
 @import "blocks/page-footer";
 
-/* ====== Footer block - social ======= */
+/* ======= Footer block - social ======== */
 @import "blocks/social";
 @import "blocks/social-links";
 @import "blocks/footer-contacts";

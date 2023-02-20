@@ -1,4 +1,35 @@
 .page-main {
   display: flex;
   flex-direction: column;
+  padding: 0;
+  width: 100vw;
+}
+
+.page-main__badge {
+  margin: 0;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $basePrimary;
+}
+
+.page-main__title {
+  margin: 0;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.5;
+  color: $baseBlack;
+
+  @media (min-width: $tabletWidth) {
+    font-size: 42px;
+    line-height: 1.52;
+  }
+}
+
+.page-main__advantages {
+  margin: 0 auto;
 }
