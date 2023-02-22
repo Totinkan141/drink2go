@@ -7,6 +7,10 @@
   display: flex;
   flex-direction: column;
   gap: 21px;
+
+  @media (min-width: $tabletWidth) {
+    gap: 20px;
+  }
 }
 
 .country__item {

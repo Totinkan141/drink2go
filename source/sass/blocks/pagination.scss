@@ -1,0 +1,121 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  @media (min-width: $tabletWidth) {
+    min-width: 395px;
+  }
+}
+
+.pagination__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.pagination__button {
+  width: 40px;
+  height: 40px;
+  color: $basePrimary;
+  background-color: $baseWhite;
+  border-radius: 4px;
+
+  &--to-next  {
+    transform: rotate(180deg);
+  }
+
+  &:hover,
+  &:focus {
+    color: $baseWhite;
+    background-color: $primaryLighter;
+  }
+
+  &:active {
+    color: $baseWhite;
+    background-color: $primaryDarker;
+  }
+
+  &:disabled {
+    color: $baseWhite;
+    background-color: $lightGrey;
+    cursor:default;
+  }
+
+  @media (min-width: $mobileStart) and (max-width: $mobileOnly) {
+    span {
+      @include visually-hidden;
+    }
+  }
+
+  @media (min-width: $tabletWidth) {
+    padding: 8px 20px;
+    width: auto;
+
+    &--to-next {
+      transform: rotate(0);
+    }
+  }
+}
+
+.pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: $basePrimary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  background-color: $baseWhite;
+
+  &--current {
+    background-color: $lightestGrey;
+    color: $baseBlack;
+    font-weight: 600;
+  }
+
+  &:hover,
+  &:focus {
+    color: $baseWhite;
+    background-color: $primaryLighter;
+  }
+
+  &:active {
+    color: $baseWhite;
+    background-color: $primaryDarker;
+  }
+
+  &--disabled {
+    color: $baseWhite;
+    background-color: $lightGrey;
+    cursor:default;
+  }
+}
+
+.pagination__item {
+  width: 40px;
+  height: 40px;
+}
+
+.pagination__arrow {
+  @media (min-width: $tabletWidth) {
+    @include visually-hidden;
+  }
+}
+
+.pagination__button-text {
+  @media (min-width: $tabletWidth) {
+    font-family: "Montserrat", "Tahoma", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $basePrimary;
+  }
+}

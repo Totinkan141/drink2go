@@ -3,6 +3,11 @@
   flex-direction: column;
   position: relative;
   gap: 36px;
+
+  @media (min-width: $tabletWidth) {
+    width: 220px;
+    gap: 31px;
+  }
 }
 
 .range__bar {
@@ -13,6 +18,12 @@
   top: -1px;
   height: 4px;
   background-color: $primaryLighter;
+  left: 0;
+  width: 241px;
+
+  @media (min-width: $tabletWidth) {
+    width: 180px;
+  }
 }
 
 .range__toggle {
@@ -76,11 +87,20 @@
     left: 135px;
     background-color: $baseGrey;
   }
+
+  @media (min-width: $tabletWidth) {
+    max-width: 220px;
+
+    &::after {
+      top: 20px;
+      left: 105px;
+    }
+  }
 }
 
 .range__input {
   width: 118px;
-  height: 38px;
+  min-height: 38px;
   padding: 7px 10px;
   border: solid 2px $primaryLighter;
   border-radius: 4px;
@@ -108,6 +128,11 @@
     color: $lightGrey;
     cursor: default;
   }
+
+  @media (min-width: $tabletWidth) {
+    width: 93px;
+    min-height: 40px;
+  }
 }
 
 .range__input::-webkit-outer-spin-button,
@@ -132,5 +157,9 @@
       background-color: $lightestGrey;
       border-color: $baseGrey;
     }
+  }
+
+  @media (min-width: $tabletWidth) {
+    width: 217px;
   }
 }

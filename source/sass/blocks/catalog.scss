@@ -9,6 +9,11 @@
   width: $mobileStart;
   padding: 50px 20px 44px;
   margin: 0 auto;
+
+  @media (min-width: $tabletWidth) {
+    width: $tabletWidth;
+    padding: 80px 20px 90px;
+  }
 }
 
 .catalog__header {

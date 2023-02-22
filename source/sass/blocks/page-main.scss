@@ -34,3 +34,9 @@
 .page-main__catalog {
   margin: 0 auto;
 }
+
+.page-main__advantages {
+  @media (min-width: $tabletWidth) {
+    margin: 0 auto 40px;
+  }
+}
