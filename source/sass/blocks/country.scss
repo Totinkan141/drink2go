@@ -1,0 +1,71 @@
+.country {
+  display: block;
+}
+
+.country__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.country__item {
+  min-height: 22px;
+}
+
+.country__control {
+  position: relative;
+  padding-left: 54px;
+}
+
+.country__name {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.country__checkbox-mask {
+  position: absolute;
+  top: -4px;
+  left: 2px;
+  width: 42px;
+  height: 24px;
+  background-color: $baseGrey;
+  border: 0;
+  border-radius: 12px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 2px;
+    background-color: $baseWhite;
+    border-radius: 50%;
+
+  }
+}
+
+.country__input {
+  &:checked ~ .country__checkbox-mask {
+    background-color: $primaryLighter;
+    transition: background-color 0.2s linear;
+
+    &::after {
+      transform: translate(18px, 0);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &:disabled ~ .country__name  {
+    color: $baseGrey;
+  }
+  &:disabled ~ .country__checkbox-mask  {
+    background-color: $lightGrey;
+  }
+}
+
+
