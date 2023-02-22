@@ -1,0 +1,53 @@
+.form__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 0 auto;
+  width: 160px;
+}
+
+.form__button {
+  width: 160px;
+  min-height: 45px;
+  border-radius: 4px;
+  padding: 10px 0;
+  text-align: center;
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+  &--submit {
+    font-size: 13px;
+    color: $baseWhite;
+    background-color: $basePrimary;
+
+    &:disabled {
+      cursor: default;
+      background-color: $baseGrey;
+    }
+  }
+
+  &--reset {
+    font-size: 14px;
+    color: $basePrimary;
+    background-color: $baseWhite;
+
+    &:disabled {
+      cursor: default;
+      background-color: $lightGrey;
+      color: $baseWhite;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primaryLighter;
+    color: $baseWhite;
+  }
+
+  &:active {
+    color: $baseWhite;
+    background-color: $primaryDarker;
+  }
+}

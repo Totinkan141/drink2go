@@ -1,0 +1,17 @@
+.filter {
+  display: block;
+}
+
+.filter__block {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+
+  &--sort {
+    margin-bottom: 21px;
+  }
+
+  &--country {
+    margin-bottom: 30px;
+  }
+}

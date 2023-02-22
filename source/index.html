@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Интернет-магазин кофейных напитков - Drink2Go</title>
+  <title>Drink2Go: Интернет-магазин кофейных напитков</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
@@ -71,7 +71,7 @@
   <main class="page-main">
 
     <!--  Блок преимуществ -->
-    <div class="page-main__advantages advantages">
+    <section class="page-main__advantages advantages">
       <div class="advantages__container">
         <header class="advantages__header">
           <h4 class="page-main__badge advantages__badge">Преимущества</h4>
@@ -118,10 +118,250 @@
           </li>
         </ul>
       </div>
-    </div>
+    </section>
+    <!-- Каталог -->
+    <section class="page-main__catalog catalog">
+      <div class="catalog__container">
+        <header class="catalog__header">
+          <h4 class="page-main__badge catalog__badge">Каталог</h4>
+          <h2 class="page-main__title catalog__title">Каталог кофейных напитков</h2>
+        </header>
+        <!-- Блок фильтров с формой -->
+        <div class="catalog__filter filter">
+          <!-- Форма блока с фильтерами каталога -->
+          <form class="filter__form form" id="catalog-form" action="https://echo.htmlacademy.ru">
+            <!-- Диапозон цены -->
+            <fieldset class="filter__block filter-block">
+              <legend class="filter-block__name filter-block__name--price">Цена</legend>
+              <div class="filter-block__range range">
+                <div class="range__scale">
+                  <div class="range__bar" style="left: 0;width: 241px;">
+                    <button class="range__toggle range__toggle--min" type="button"></button>
+                    <button class="range__toggle range__toggle--max" type="button"></button>
+                  </div>
+                </div>
+                <div class="range__inputs">
+                  <label class="visually-hidden" for="price-min">Поле ввода минимальной цены</label>
+                  <input class="range__input" type="number" name="price-min" id="price-min" placeholder="0" min="0" >
+                  <label class="visually-hidden" for="price-max">Поле ввода максивальной цены</label>
+                  <input class="range__input" type="number" name="price-max" id="price-max" placeholder="900" min="0" value="900">
+                </div>
+              </div>
+            </fieldset>
+            <!-- Сорт молока -->
+            <fieldset class="filter__block filter__block--sort filter-block">
+              <legend class="filter-block__name filter-block__name--sort">Наличие молока</legend>
+              <div class="filter-block__sort sort">
+                <ul class="sort__list">
+                  <li class="sort__item">
+                    <label class="sort__control">
+                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="no-matter"
+                        checked>
+                      <span class="sort__radio-mask"></span>
+                      <span class="sort__name">Неважно</span>
+                    </label>
+                  </li>
+                  <li class="sort__item">
+                    <label class="sort__control">
+                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="only-animal">
+                      <span class="sort__radio-mask"></span>
+                      <span class="sort__name">Только животное</span>
+                    </label>
+                  </li>
+                  <li class="sort__item">
+                    <label class="sort__control">
+                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="only-vegetable">
+                      <span class="sort__radio-mask"></span>
+                      <span class="sort__name">Только растительное</span>
+                    </label>
+                  </li>
+                  <li class="sort__item">
+                    <label class="sort__control">
+                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="without" disabled>
+                      <span class="sort__radio-mask"></span>
+                      <span class="sort__name">Без молока</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <!-- Страна производитель -->
+            <fieldset class="filter__block filter__block--country filter-block">
+              <legend class="filter-block__name filter-block__name--country">Страна произрастания</legend>
+              <div class="filter-block__country country">
+                <ul class="country__list">
+                  <li class="country__item">
+                    <label class="country__control">
+                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Brazil"
+                        checked>
+                      <span class="country__checkbox-mask"></span>
+                      <span class="country__name">Бразилия</span>
+                    </label>
+                  </li>
+                  <li class="country__item">
+                    <label class="country__control">
+                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Ethiopia">
+                      <span class="country__checkbox-mask"></span>
+                      <span class="country__name">Эфиопия</span>
+                    </label>
+                  </li>
+                  <li class="country__item">
+                    <label class="country__control">
+                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Colombia">
+                      <span class="country__checkbox-mask"></span>
+                      <span class="country__name">Колумбия</span>
+                    </label>
+                  </li>
+                  <li class="country__item">
+                    <label class="country__control">
+                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Costa-Rica">
+                      <span class="country__checkbox-mask"></span>
+                      <span class="country__name">Коста-Рика</span>
+                    </label>
+                  </li>
+                  <li class="country__item">
+                    <label class="country__control">
+                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Peru"
+                        disabled>
+                      <span class="country__checkbox-mask"></span>
+                      <span class="country__name">Перу</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <!-- Кнопки взаимодействия с формой  -->
+            <div class="form__buttons">
+              <button class="form__button form__button--submit button" type="submit">Применить фильтр</button>
+              <button class="form__button form__button--reset button" type="reset">Сбросить фильтр</button>
+            </div>
+          </form>
+        </div>
+        <!-- Блок с продукцией -->
+        <div class="catalog__products products">
+          <header class="products__header-sort products-header-sort">
+            <h3 class="products-header-sort__title">Сортировка:</h3>
+            <label for="products-sort"></label>
+            <select class="products-header-sort__select" name="products-sort" id="products-sort"
+              aria-label="Сортировка" form="catalog-form">
+              <option value="default">по умолчанию</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="cheap">сначала дешёвые</option>
+              <option value="popular">Популярные</option>
+            </select>
+          </header>
+          <ul class="products__list">
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в белой банке">
+              <h3 class="product__name">Декаф Флэт Уайт</h3>
+              <p class="product__descriprion">Кофе без кофеина из Эфиопии
+                с натуральным фермерским молоком</p>
+              <div class="product__buy">
+                <span class="product__price">225₽</span>
+                <button class="product__button button">
+                  <svg>
+                  </svg>
+                  <span>В корзину</span>
+                </button>
+              </div>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в фиолетовой банке">
+              <h3 class="product__name">Декаф Флэт Уайт</h3>
+              <p class="product__descriprion">Кофе без кофеина из Эфиопии
+                с натуральным фермерским молоком</p>
+              <div class="product__buy">
+                <span class="product__price">225₽</span>
+                <button class="product__button button">
+                  <svg>
+                  </svg>
+                  <span>В корзину</span>
+                </button>
+              </div>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в чёрной банке">
+              <h3 class="product__name">Декаф Флэт Уайт</h3>
+              <p class="product__descriprion">Кофе без кофеина из Эфиопии
+                с натуральным фермерским молоком</p>
+              <div class="product__buy">
+                <span class="product__price">225₽</span>
+                <button class="product__button button">
+                  <svg>
+                  </svg>
+                  <span>В корзину</span>
+                </button>
+              </div>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в тёмно-красной банке">
+              <h3 class="product__name">Декаф Флэт Уайт</h3>
+              <p class="product__descriprion">Кофе без кофеина из Эфиопии
+                с натуральным фермерским молоком</p>
+              <div class="product__buy">
+                <span class="product__price">225₽</span>
+                <button class="product__button button">
+                  <svg>
+                  </svg>
+                  <span>В корзину</span>
+                </button>
+              </div>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в тёмно-зелёной банке">
+              <h3 class="product__name">Декаф Флэт Уайт</h3>
+              <p class="product__descriprion">Кофе без кофеина из Эфиопии
+                с натуральным фермерским молоком</p>
+              <div class="product__buy">
+                <span class="product__price">225₽</span>
+                <button class="product__button button">
+                  <svg>
+                  </svg>
+                  <span>В корзину</span>
+                </button>
+              </div>
+            </li>
+            <li class="products__item product">
+              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в светло-жёлтой банке">
+              <h3 class="product__name">Декаф Флэт Уайт</h3>
+              <p class="product__descriprion">Кофе без кофеина из Эфиопии
+                с натуральным фермерским молоком</p>
+              <div class="product__buy">
+                <span class="product__price">225₽</span>
+                <button class="product__button button">
+                  <svg>
+                  </svg>
+                  <span>В корзину</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <div class="products__pagination pagination">
+            <button class="pagination__button button pagination__button--to-previous ">
+              <span class="visually-hidden">Предыдущая страница</span>
+            </button>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">1</a>
+              </li>
+              <li class="pagination__item pagination__item--current">
+                <a href="#" class="pagination__link">2</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">3</a>
+              </li>
+            </ul>
+            <button class="pagination__button button pagination__button--to-next">
+              <span class="visually-hidden">Следущая страница</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Здесь подключается карта при помощи leaflet -->
-    <div class="page-main__map map map--nojs" >
+    <section class="page-main__map map map--nojs">
+      <h2 class="visually-hidden">Наш офис рассположен здесь</h2>
       <div class="mapid" id="mapid">
       </div>
       <div class="map__container">
@@ -134,10 +374,11 @@
           <source media="(min-width: 1440px)" srcset="./img/map/map-desktop@1x.png 1x, ./img/map/map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="./img/map/map-tablet@1x.png 1x, ./img/map/map-tablet@2x.png 2x">
           <img src="./img/map/map-mobile@1x.png" srcset="./img/map/map-mobile@1x.png 1x, ./img/map/map-mobile@2x.png 2x"
-            alt="Офис компании Drink2Go по адресу набережная реки Карповки, 5П, Санкт-Петербург" width="320" height="420">
+            alt="Офис компании Drink2Go по адресу набережная реки Карповки, 5П, Санкт-Петербург" width="320"
+            height="420">
         </picture>
       </div>
-    </div>
+    </section>
   </main>
   <!-- Подвал сайта -->
   <footer class="page-footer">
