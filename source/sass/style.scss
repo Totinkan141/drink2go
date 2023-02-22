@@ -5,6 +5,7 @@
 @import "global/veiwports";
 @import "mixin/visually-hidden";
 @import "mixin/reset-list";
+@import "mixin/button";
 
 /* ====================== Header =======================*/
 @import "blocks/header";
@@ -19,11 +20,14 @@
 
 /* ========= Main block catalog ========= */
 @import "blocks/catalog";
+@import "blocks/form";
 @import "blocks/fitler";
 @import "blocks/filter-block";
 @import "blocks/range";
 @import "blocks/sort";
 @import "blocks/country";
+@import "blocks/products";
+@import "blocks/products-header-sort";
 
 /* = Main block interactive map Leaflet = */
 @import "blocks/map";

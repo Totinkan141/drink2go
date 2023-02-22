@@ -2,14 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: 36px
-}
-
-.range__scale {
-  position: relative;
-  height: 2px;
-  width: 280px;
-  background-color: $lightGrey;
+  gap: 36px;
 }
 
 .range__bar {
@@ -32,6 +25,14 @@
   border: solid 2px $primaryLighter;
   cursor: pointer;
 
+  &::after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
 
   &--min {
     left: 0;
@@ -39,6 +40,24 @@
 
   &--max {
     right: -19px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::after {
+      content: "";
+      background-color: rgba($basePrimary, 0.25);
+    }
+  }
+
+  &:active {
+    border-color: $basePrimary;
+
+    &::after {
+      background-color: $basePrimary;
+    }
   }
 }
 
@@ -48,7 +67,7 @@
   justify-content: space-between;
   position: relative;
 
-  &::after  {
+  &::after {
     position: absolute;
     content: "";
     width: 9px;
@@ -56,7 +75,6 @@
     top: 18px;
     left: 135px;
     background-color: $baseGrey;
-
   }
 }
 
@@ -73,10 +91,46 @@
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
+  outline: none;
+  cursor: pointer;
+
+  &::placeholder {
+    color: $baseGrey;
+  }
+
+  &:focus {
+    border-color: $primaryDarker;
+  }
+
+  &:disabled {
+    background-color: $lightestGrey;
+    border-color: $lightGrey;
+    color: $lightGrey;
+    cursor: default;
+  }
 }
 
 .range__input::-webkit-outer-spin-button,
 .range__input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.range__scale {
+  position: relative;
+  height: 2px;
+  width: 280px;
+  background-color: $lightGrey;
+
+  &--disabled {
+    .range__bar {
+      background-color: $baseGrey;
+    }
+
+    .range__toggle {
+      cursor: default;
+      background-color: $lightestGrey;
+      border-color: $baseGrey;
+    }
+  }
 }

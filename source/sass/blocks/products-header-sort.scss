@@ -1,0 +1,34 @@
+.products-header-sort {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.products-header-sort__title {
+  margin: auto 0;
+  font-weight: 600;
+}
+
+.products-header-sort__select {
+  width: 165px;
+  min-height: 32px;
+  padding: 4px 6px 4px 7px;
+  border: 0;
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $basePrimary;
+  background-color: $lightestGrey;
+  cursor: pointer;
+  border-radius: 4px;
+
+  > option {
+    background-color: $baseWhite;
+  }
+
+  &:hover {
+    background-color: $baseSecondary;
+  }
+}

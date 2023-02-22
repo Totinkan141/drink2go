@@ -16,6 +16,7 @@
 .country__control {
   position: relative;
   padding-left: 54px;
+  cursor: pointer;
 }
 
 .country__name {
@@ -45,27 +46,38 @@
     left: 2px;
     background-color: $baseWhite;
     border-radius: 50%;
-
   }
 }
 
 .country__input {
+  &:hover,
+  &:focus {
+    ~ .country__checkbox-mask {
+      background-color: rgba($basePrimary, 0.25);
+      border: solid 2px $primaryLighter;
+    }
+
+    ~ .country__checkbox-mask::after {
+      top: 0;
+      left: 0;
+    }
+  }
+
   &:checked ~ .country__checkbox-mask {
-    background-color: $primaryLighter;
+    background-color: $basePrimary;
     transition: background-color 0.2s linear;
 
     &::after {
       transform: translate(18px, 0);
-      transition: all 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
     }
   }
 
-  &:disabled ~ .country__name  {
+  &:disabled ~ .country__name {
     color: $baseGrey;
   }
-  &:disabled ~ .country__checkbox-mask  {
+
+  &:disabled ~ .country__checkbox-mask {
     background-color: $lightGrey;
   }
 }
-
-

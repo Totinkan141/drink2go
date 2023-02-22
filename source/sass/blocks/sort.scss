@@ -17,6 +17,7 @@
   display: inline-block;
   padding-left: 34px;
   position: relative;
+  cursor: pointer;
 }
 
 .sort__radio-mask {
@@ -48,12 +49,24 @@
 
 /* Поведение радио кнопок в фильтре каталога*/
 .sort__input {
-
   // радио - выбран
   &:checked + .sort__radio-mask {
     border-color: $primaryLighter;
+
     &::after {
       content: "";
+    }
+  }
+
+  &:hover,
+  &:focus {
+    + .sort__radio-mask {
+      border-color: $primaryLighter;
+    }
+
+    + .sort__radio-mask::after {
+      content: "";
+      background-color: rgba($basePrimary, 0.25);
     }
   }
 
@@ -61,8 +74,21 @@
   &:disabled ~ .sort__name {
     color: $lightGrey;
   }
+
   &:disabled ~ .sort__radio-mask {
     border-color: $lightGrey;
     background-color: $lightestGrey;
+  }
+
+  &:checked:disabled {
+    ~ .sort__radio-mask {
+      border-color: $lightGrey;
+      background-color: $lightestGrey;
+    }
+
+    ~ .sort__radio-mask::after {
+      content: "";
+      background-color: $lightGrey;
+    }
   }
 }
