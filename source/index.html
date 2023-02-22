@@ -142,9 +142,10 @@
                 </div>
                 <div class="range__inputs">
                   <label class="visually-hidden" for="price-min">Поле ввода минимальной цены</label>
-                  <input class="range__input" type="number" name="price-min" id="price-min" placeholder="0" min="0" >
+                  <input class="range__input" type="number" name="price-min" id="price-min" placeholder="0" min="0">
                   <label class="visually-hidden" for="price-max">Поле ввода максивальной цены</label>
-                  <input class="range__input" type="number" name="price-max" id="price-max" placeholder="900" min="0" value="900">
+                  <input class="range__input" type="number" name="price-max" id="price-max" placeholder="900" min="0"
+                    value="900">
                 </div>
               </div>
             </fieldset>
@@ -238,12 +239,13 @@
           </form>
         </div>
         <!-- Блок с продукцией -->
-        <div class="catalog__products products">
+        <section class="catalog__products products">
+          <h2 class="visually-hidden">Каталог товаров</h2>
           <header class="products__header-sort products-header-sort">
             <h3 class="products-header-sort__title">Сортировка:</h3>
             <label for="products-sort"></label>
-            <select class="products-header-sort__select" name="products-sort" id="products-sort"
-              aria-label="Сортировка" form="catalog-form">
+            <select class="products-header-sort__select" name="products-sort" id="products-sort" aria-label="Сортировка"
+              form="catalog-form">
               <option value="default">по умолчанию</option>
               <option value="expensive">сначала дорогие</option>
               <option value="cheap">сначала дешёвые</option>
@@ -251,85 +253,126 @@
             </select>
           </header>
           <ul class="products__list">
+            <!-- Первый товар -->
             <li class="products__item product">
-              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в белой банке">
+              <picture>
+                <source srcset="./img/catalog/coffee-can-1@1x.webp 1x, coffee-can-1@2x.webp 2x">
+                <source srcset="./img/catalog/coffee-can-1@1x.png 1x, coffee-can-1@2x.png 2x">
+                <img class="product__image" src="./img/catalog/coffee-can-1@1x.png"
+                  alt="кофе Декаф Флэт Уайт в белой банке" width="130" height="188">
+              </picture>
               <h3 class="product__name">Декаф Флэт Уайт</h3>
-              <p class="product__descriprion">Кофе без кофеина из Эфиопии
-                с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии
+                с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
                 <button class="product__button button">
-                  <svg>
+                  <svg class="product__button-icon" width="20" height="16">
+                    <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
                   <span>В корзину</span>
                 </button>
               </div>
             </li>
+            <!-- Второй товар -->
             <li class="products__item product">
-              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в фиолетовой банке">
+              <picture>
+                <source srcset="./img/catalog/coffee-can-2@1x.webp 1x, coffee-can-2@2x.webp 2x">
+                <source srcset="./img/catalog/coffee-can-2@1x.png 1x, coffee-can-2@2x.png 2x">
+                <img class="product__image" src="./img/catalog/coffee-can-2@1x.png"
+                  alt="кофе Декаф Флэт Уайт в фиолетовой банке" width="130" height="188">
+              </picture>
               <h3 class="product__name">Декаф Флэт Уайт</h3>
-              <p class="product__descriprion">Кофе без кофеина из Эфиопии
-                с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
                 <button class="product__button button">
-                  <svg>
+                  <svg class="product__button-icon" width="20" height="16">
+                    <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
                   <span>В корзину</span>
                 </button>
               </div>
             </li>
+            <!-- Третий товар -->
             <li class="products__item product">
-              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в чёрной банке">
+              <picture>
+                <source srcset="./img/catalog/coffee-can-3@1x.webp 1x, coffee-can-3@2x.webp 2x">
+                <source srcset="./img/catalog/coffee-can-3@1x.png 1x, coffee-can-3@2x.png 2x">
+                <img class="product__image" src="./img/catalog/coffee-can-3@1x.png"
+                  alt="кофе Декаф Флэт Уайт в чёрной банке" width="130" height="188">
+              </picture>
               <h3 class="product__name">Декаф Флэт Уайт</h3>
-              <p class="product__descriprion">Кофе без кофеина из Эфиопии
-                с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии
+                с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
                 <button class="product__button button">
-                  <svg>
+                  <svg class="product__button-icon" width="20" height="16">
+                    <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
                   <span>В корзину</span>
                 </button>
               </div>
             </li>
+            <!-- Четвёртый товар -->
             <li class="products__item product">
-              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в тёмно-красной банке">
+              <picture>
+                <source srcset="./img/catalog/coffee-can-4@1x.webp 1x, coffee-can-4@2x.webp 2x">
+                <source srcset="./img/catalog/coffee-can-4@1x.png 1x, coffee-can-4@2x.png 2x">
+                <img class="product__image" src="./img/catalog/coffee-can-4@1x.png"
+                  alt="кофе Декаф Флэт Уайт в тёмно-красной банке" width="130" height="188">
+              </picture>
               <h3 class="product__name">Декаф Флэт Уайт</h3>
-              <p class="product__descriprion">Кофе без кофеина из Эфиопии
-                с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии
+                с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
                 <button class="product__button button">
-                  <svg>
+                  <svg class="product__button-icon" width="20" height="16">
+                    <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
                   <span>В корзину</span>
                 </button>
               </div>
             </li>
+            <!-- Пятый товар -->
             <li class="products__item product">
-              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в тёмно-зелёной банке">
+              <picture>
+                <source srcset="./img/catalog/coffee-can-5@1x.webp 1x, coffee-can-5@2x.webp 2x">
+                <source srcset="./img/catalog/coffee-can-5@1x.png 1x, coffee-can-5@2x.png 2x">
+                <img class="product__image" src="./img/catalog/coffee-can-5@1x.png"
+                  alt="кофе Декаф Флэт Уайт в тёмно-зелёной банке" width="130" height="188">
+              </picture>
               <h3 class="product__name">Декаф Флэт Уайт</h3>
-              <p class="product__descriprion">Кофе без кофеина из Эфиопии
-                с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии
+                с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
                 <button class="product__button button">
-                  <svg>
+                  <svg class="product__button-icon" width="20" height="16">
+                    <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
                   <span>В корзину</span>
                 </button>
               </div>
             </li>
+            <!-- Шестой товар -->
             <li class="products__item product">
-              <img class="product__image" src="#" alt="кофе Декаф Флэт Уайт в светло-жёлтой банке">
+              <picture>
+                <source srcset="./img/catalog/coffee-can-6@1x.webp 1x, coffee-can-6@2x.webp 2x">
+                <source srcset="./img/catalog/coffee-can-6@1x.png 1x, coffee-can-6@2x.png 2x">
+                <img class="product__image" src="./img/catalog/coffee-can-6@1x.png"
+                  alt="кофе Декаф Флэт Уайт в светло-жёлтой банке" width="130" height="188">
+              </picture>
               <h3 class="product__name">Декаф Флэт Уайт</h3>
-              <p class="product__descriprion">Кофе без кофеина из Эфиопии
-                с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии
+                с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
                 <button class="product__button button">
-                  <svg>
+                  <svg class="product__button-icon" width="20" height="16">
+                    <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
                   <span>В корзину</span>
                 </button>
@@ -355,7 +398,7 @@
               <span class="visually-hidden">Следущая страница</span>
             </button>
           </div>
-        </div>
+        </section>
       </div>
     </section>
 
