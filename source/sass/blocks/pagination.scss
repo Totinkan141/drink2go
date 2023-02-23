@@ -3,7 +3,7 @@
   flex-direction: row;
   gap: 20px;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     min-width: 395px;
   }
 }
@@ -18,8 +18,8 @@
 .pagination__button {
   width: 40px;
   height: 40px;
-  color: $basePrimary;
-  background-color: $baseWhite;
+  color: $base-primary;
+  background-color: $base-white;
   border-radius: 4px;
 
   &--to-next  {
@@ -28,28 +28,28 @@
 
   &:hover,
   &:focus {
-    color: $baseWhite;
-    background-color: $primaryLighter;
+    color: $base-white;
+    background-color: $primary-lighter;
   }
 
   &:active {
-    color: $baseWhite;
-    background-color: $primaryDarker;
+    color: $base-white;
+    background-color: $primary-darker;
   }
 
   &:disabled {
-    color: $baseWhite;
-    background-color: $lightGrey;
+    color: $base-white;
+    background-color: $light-grey;
     cursor:default;
   }
 
-  @media (min-width: $mobileStart) and (max-width: $mobileOnly) {
+  @media (min-width: $mobile-start) and (max-width: $mobile-only) {
     span {
       @include visually-hidden;
     }
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     padding: 8px 20px;
     width: auto;
 
@@ -66,34 +66,34 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  color: $basePrimary;
+  color: $base-primary;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   border-radius: 4px;
-  background-color: $baseWhite;
+  background-color: $base-white;
 
   &--current {
-    background-color: $lightestGrey;
-    color: $baseBlack;
+    background-color: $lightest-grey;
+    color: $base-black;
     font-weight: 600;
   }
 
   &:hover,
   &:focus {
-    color: $baseWhite;
-    background-color: $primaryLighter;
+    color: $base-white;
+    background-color: $primary-lighter;
   }
 
   &:active {
-    color: $baseWhite;
-    background-color: $primaryDarker;
+    color: $base-white;
+    background-color: $primary-darker;
   }
 
   &--disabled {
-    color: $baseWhite;
-    background-color: $lightGrey;
+    color: $base-white;
+    background-color: $light-grey;
     cursor:default;
   }
 }
@@ -104,18 +104,18 @@
 }
 
 .pagination__arrow {
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     @include visually-hidden;
   }
 }
 
 .pagination__button-text {
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     font-family: "Montserrat", "Tahoma", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: $basePrimary;
+    color: $base-primary;
   }
 }

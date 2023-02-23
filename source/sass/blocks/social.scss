@@ -7,13 +7,13 @@
 .social__logo {
   margin-right: 38px;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     img {
       width: 170px;
     }
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
     margin-right: 0;
@@ -22,7 +22,7 @@
 }
 
 .social__logo-subtitle {
-  @media (max-width: $tabletOnly) {
+  @media (max-width: $tablet-only) {
     @include visually-hidden;
   }
 
@@ -31,7 +31,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: $baseBlack;
+  color: $base-black;
 }
 
 .social__links {

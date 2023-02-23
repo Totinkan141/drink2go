@@ -8,8 +8,8 @@
 
   /*  Главная навигация */
   &--main {
-    width: $mobileStart;
-    background-color: $baseWhite;
+    width: $mobile-start;
+    background-color: $base-white;
     position: absolute;
     z-index: 5;
     top: 60px;
@@ -21,7 +21,7 @@
     }
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     &--main {
       width: auto;
       grid-column: 2 / 3;
@@ -37,7 +37,7 @@
     }
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     &--main {
       flex-wrap: wrap;
       min-height: 80px;
@@ -73,10 +73,10 @@
   }
 
   &:active {
-    background-color: $baseSecondary;
+    background-color: $base-secondary;
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
@@ -88,7 +88,7 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     width: 100%;
     justify-content: space-between;
   }
@@ -96,19 +96,19 @@
 
 /* Главная навигация */
 .navigation__list--main {
-  width: $mobileStart;
+  width: $mobile-start;
   flex-direction: column;
-  border-top: 1px solid $baseSecondary;
+  border-top: 1px solid $base-secondary;
 
   > .navigation__item {
     display: flex;
     width: 100%;
     min-height: 60px;
-    border-bottom: 1px solid $baseSecondary;
+    border-bottom: 1px solid $base-secondary;
   }
 
   /* Главная навигация - tablet */
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     width: auto;
     border: 0;
@@ -120,7 +120,7 @@
     }
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 20px;
@@ -154,7 +154,7 @@
     background-image: url("../../img/navigation/user-profile.svg");
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     &--user-cart,
     &--user-enter {
       height: 80px;
@@ -171,7 +171,7 @@
     }
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     &--user-cart,
     &--user-enter {
       width: max-content;
@@ -179,7 +179,7 @@
 
       &:hover,
       &:focus {
-        color: $basePrimary;
+        color: $base-primary;
       }
     }
 
@@ -193,7 +193,7 @@
 
 
 .navigation--secondary ~ .navigation__item {
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     margin-left: 20px;
   }
 }
@@ -201,7 +201,7 @@
 .navigation__link {
   /* этот спан скрывает подпись у navigation--secondary, показываеться должен только на desktop*/
   span {
-    @media (max-width: $tabletOnly) {
+    @media (max-width: $tablet-only) {
       @include visually-hidden;
     }
   }
@@ -213,7 +213,7 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  color: $baseBlack;
+  color: $base-black;
   text-transform: uppercase;
   width: 100%;
   height: 60px;
@@ -221,15 +221,15 @@
   text-align: center;
 
   &:active {
-    background-color: $baseSecondary;
+    background-color: $base-secondary;
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     height: 80px;
     padding: 32px 20px;
 
     &--current {
-      color: $basePrimary;
+      color: $base-primary;
 
       &::after {
         position: absolute;
@@ -245,13 +245,13 @@
 
     &:hover,
     &:focus {
-      color: $basePrimary;
+      color: $base-primary;
     }
   }
 }
 
 .navigation--secondary > .navigation__link {
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     height: 80px;
     width: max-content;
     padding: 32px 20px 32px 44px;
@@ -260,7 +260,7 @@
 
 /* Включает/выключает отображение главной навигации,а также устанавливает картинку для конпки бургера*/
 
-@media (max-width: $mobileOnly) {
+@media (max-width: $mobile-only) {
   .navigation--secondary.navigation--closed {
     .navigation__toggle::after {
       background-image: url("../../img/navigation/burger-menu-open.svg");

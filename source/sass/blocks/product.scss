@@ -2,13 +2,19 @@
   display: flex;
   flex-direction: column;
   padding: 40px 20px 21px;
-  background-color: $baseWhite;
+  background-color: $base-white;
   width: 280px;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     width: 349px;
     padding: 50px 30px 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 317px;
+    padding: 50px 30px 30px;
+  }
+
 }
 
 .product__image {
@@ -16,7 +22,7 @@
   margin: 0 auto 23px;
   padding: 0;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     margin: 0 auto 32px;
   }
 }
@@ -26,9 +32,9 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  color: $baseBlack;
+  color: $base-black;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     margin: 0 0 9px;
     font-size: 24px;
     line-height: 36px;
@@ -41,9 +47,9 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: $baseBlack;
+  color: $base-black;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     margin: 0 0 19px;
   }
 }
@@ -67,9 +73,9 @@
   width: 141px;
   min-height: 36px;
   padding: 8px 20px 8px 46px;
-  background-color: $basePrimary;
+  background-color: $base-primary;
   border-radius: 4px;
-  color: $baseWhite;
+  color: $base-white;
 
   span {
     font-family: "Montserrat", "Tahoma", sans-serif;
@@ -81,16 +87,16 @@
 
   &:hover,
   &:focus {
-    background-color: $primaryLighter;
+    background-color: $primary-lighter;
   }
 
   &:active {
-    background-color: $primaryDarker;
+    background-color: $primary-darker;
   }
 
   &:disabled {
     cursor: default;
-    background-color: $baseGrey;
+    background-color: $base-grey;
   }
 }
 

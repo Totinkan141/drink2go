@@ -1,5 +1,5 @@
 .developed-by {
-  color: $baseGrey;
+  color: $base-grey;
   vertical-align: baseline;
   font-size: 12px;
   line-height: 16px;
@@ -13,18 +13,18 @@
 
 .developed-by__copyright {
   position: relative;
-  color: $baseGrey;
+  color: $base-grey;
 
   &:hover ~ .developed-by__icon,
   &:focus ~ .developed-by__icon {
-    color: $basePrimary;
+    color: $base-primary;
   }
 
   &:active ~ .developed-by__icon {
-    color: $primaryDarker;
+    color: $primary-darker;
   }
 }
 
 .developed-by__text {
-  color: $baseGrey;
+  color: $base-grey;
 }

@@ -15,7 +15,17 @@
     margin-bottom: 30px;
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
+    &--price,
+    &--sort,
+    &--country {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+
     &--price,
     &--sort,
     &--country {

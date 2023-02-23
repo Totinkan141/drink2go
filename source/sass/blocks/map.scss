@@ -1,11 +1,11 @@
 .map {
   display: block;
-  min-width: $mobileStart;
-  max-width: $mobileOnly;
+  min-width: $mobile-start;
+  max-width: $mobile-only;
   height: 420px;
   margin-bottom: 0;
   padding: 0;
-  background-color: $lightestGrey;
+  background-color: $lightest-grey;
 
   > .mapid {
     width: 100%;
@@ -16,15 +16,15 @@
     display: none;
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     height: 480px;
-    min-width: $tabletWidth;
-    max-width: $tabletOnly;
+    min-width: $tablet-width;
+    max-width: $tablet-only;
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     height: 540px;
-    min-width: $desktopWidth;
+    min-width: $desktop-width;
     max-width: 100%;
   }
 }
@@ -37,50 +37,50 @@
 
   img {
     display: block;
-    width: $mobileStart;
+    width: $mobile-start;
   }
 
   > .mapid {
     display: none;
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     img {
-      width: $tabletWidth;
+      width: $tablet-width;
       height: 480px;
     }
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     img {
-      width: $desktopWidth;
+      width: $desktop-width;
       height: 540px;
     }
   }
 }
 
 .map__container {
-  width: $mobileStart;
+  width: $mobile-start;
   display: flex;
   margin: 0 auto;
 
   picture {
-    width: $mobileStart;
+    width: $mobile-start;
   }
 
-  @media (min-width: $tabletWidth) {
-    width: $tabletWidth;
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
 
     picture {
-      width: $tabletWidth;
+      width: $tablet-width;
     }
   }
 
-  @media (min-width: $desktopWidth) {
-    width: $desktopWidth;
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
 
     picture {
-      width: $desktopWidth;
+      width: $desktop-width;
     }
   }
 }

@@ -5,30 +5,30 @@
   right: 0;
   margin: 0 auto;
   padding: 0;
-  width: $mobileStart;
-  background-color: $baseWhite;
+  width: $mobile-start;
+  background-color: $base-white;
 
-  @media (min-width: $tabletWidth) {
-    width: $tabletWidth;
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
     padding: 0 20px;
   }
 
-  @media (min-width: $desktopWidth) {
-    width: $desktopWidth;
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
     padding: 0 40px;
   }
 }
 
 .header__container {
   display: flex;
-  width: $mobileStart;
+  width: $mobile-start;
   min-height: 60px;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     min-height: 80px;
     width: 728px;
     display: grid;
@@ -36,7 +36,7 @@
     column-gap: 60px;
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     width: 1360px;
     grid-template-columns: 316px auto 1fr;
     column-gap: 162px;
@@ -52,7 +52,7 @@
     height: 36px;
   }
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     margin-top: auto;
     margin-left: 0;
     margin-bottom: auto;
@@ -63,7 +63,7 @@
     }
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
     widows: 340px;
@@ -75,18 +75,17 @@
 }
 
 .header__subtitle {
-  @media (max-width: $tabletOnly) {
+  @media (max-width: $tablet-only) {
     display: none;
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     font-family: "Montserrat", "Tahoma", sans-serif;
     font-size: 12px;
     line-height: 16px;
     font-weight: 400;
-    color: $baseBlack;
+    color: $base-black;
     margin-left: 20px;
-
     align-self: center;
   }
 }

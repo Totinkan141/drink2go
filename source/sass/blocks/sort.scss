@@ -8,7 +8,7 @@
   flex-direction: column;
   gap: 22px;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     gap: 20px;
   }
 }
@@ -30,8 +30,8 @@
   left: 0;
   width: 24px;
   height: 24px;
-  background-color: $baseWhite;
-  border: solid 2px $baseGrey;
+  background-color: $base-white;
+  border: solid 2px $base-grey;
   border-radius: 50%;
 
   &::after {
@@ -42,7 +42,7 @@
     left: 2px;
     border: 0;
     border-radius: 50%;
-    background-color: $primaryLighter;
+    background-color: $primary-lighter;
   }
 }
 
@@ -55,7 +55,7 @@
 .sort__input {
   // радио - выбран
   &:checked + .sort__radio-mask {
-    border-color: $primaryLighter;
+    border-color: $primary-lighter;
 
     &::after {
       content: "";
@@ -65,34 +65,34 @@
   &:hover,
   &:focus {
     + .sort__radio-mask {
-      border-color: $primaryLighter;
+      border-color: $primary-lighter;
     }
 
     + .sort__radio-mask::after {
       content: "";
-      background-color: rgba($basePrimary, 0.25);
+      background-color: rgba($base-primary, 0.25);
     }
   }
 
   // радио - disabled
   &:disabled ~ .sort__name {
-    color: $lightGrey;
+    color: $light-grey;
   }
 
   &:disabled ~ .sort__radio-mask {
-    border-color: $lightGrey;
-    background-color: $lightestGrey;
+    border-color: $light-grey;
+    background-color: $lightest-grey;
   }
 
   &:checked:disabled {
     ~ .sort__radio-mask {
-      border-color: $lightGrey;
-      background-color: $lightestGrey;
+      border-color: $light-grey;
+      background-color: $lightest-grey;
     }
 
     ~ .sort__radio-mask::after {
       content: "";
-      background-color: $lightGrey;
+      background-color: $light-grey;
     }
   }
 }
