@@ -22,7 +22,7 @@
   background-color: $base-white;
   border-radius: 4px;
 
-  &--to-next  {
+  &--to-next {
     transform: rotate(180deg);
   }
 
@@ -40,7 +40,7 @@
   &:disabled {
     color: $base-white;
     background-color: $light-grey;
-    cursor:default;
+    cursor: default;
   }
 
   @media (min-width: $mobile-start) and (max-width: $mobile-only) {
@@ -94,7 +94,7 @@
   &--disabled {
     color: $base-white;
     background-color: $light-grey;
-    cursor:default;
+    cursor: default;
   }
 }
 
