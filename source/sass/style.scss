@@ -1,4 +1,3 @@
-/* GLOBAL */
 @import "global/variables";
 @import "global/global";
 @import "global/fonts";
@@ -28,6 +27,8 @@
 @import "blocks/country";
 @import "blocks/products";
 @import "blocks/products-header-sort";
+@import "blocks/product";
+@import "blocks/pagination";
 
 /* = Main block interactive map Leaflet = */
 @import "blocks/map";

@@ -7,6 +7,10 @@
   display: flex;
   flex-direction: column;
   gap: 21px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
 }
 
 .country__item {
@@ -33,7 +37,7 @@
   left: 2px;
   width: 42px;
   height: 24px;
-  background-color: $baseGrey;
+  background-color: $base-grey;
   border: 0;
   border-radius: 12px;
 
@@ -44,7 +48,7 @@
     height: 20px;
     top: 2px;
     left: 2px;
-    background-color: $baseWhite;
+    background-color: $base-white;
     border-radius: 50%;
   }
 }
@@ -53,8 +57,8 @@
   &:hover,
   &:focus {
     ~ .country__checkbox-mask {
-      background-color: rgba($basePrimary, 0.25);
-      border: solid 2px $primaryLighter;
+      background-color: rgba($base-primary, 0.25);
+      border: solid 2px $primary-lighter;
     }
 
     ~ .country__checkbox-mask::after {
@@ -64,7 +68,7 @@
   }
 
   &:checked ~ .country__checkbox-mask {
-    background-color: $basePrimary;
+    background-color: $base-primary;
     transition: background-color 0.2s linear;
 
     &::after {
@@ -74,10 +78,10 @@
   }
 
   &:disabled ~ .country__name {
-    color: $baseGrey;
+    color: $base-grey;
   }
 
   &:disabled ~ .country__checkbox-mask {
-    background-color: $lightGrey;
+    background-color: $light-grey;
   }
 }

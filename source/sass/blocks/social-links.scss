@@ -6,13 +6,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  @media (min-width: $tabletWidth) {
+  @media (min-width: $tablet-width) {
     max-width: fit-content;
     gap: 20px;
     justify-content: end;
   }
 
-  @media (min-width: $desktopWidth) {
+  @media (min-width: $desktop-width) {
     justify-content: start;
   }
 }
@@ -24,16 +24,16 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: $baseGrey;
+  color: $base-grey;
 
   &:hover,
   &:focus {
-    background-color: $baseSecondary;
-    color: $basePrimary;
+    background-color: $base-secondary;
+    color: $base-primary;
   }
 
   &:active {
-    background-color: rgba($basePrimary, 0.25);
-    color: $basePrimary;
+    background-color: rgba($base-primary, 0.25);
+    color: $base-primary;
   }
 }

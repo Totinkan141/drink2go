@@ -22,4 +22,24 @@
   &--country {
     margin-bottom: 20px;
   }
+
+  @media (min-width: $tablet-width) {
+    &--price {
+      margin-bottom: 30px;
+    }
+
+    &--sort {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.filter-block__range {
+  @media (min-width: $tablet-width) {
+    margin: 0 0 0 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }

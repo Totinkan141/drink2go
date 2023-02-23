@@ -3,6 +3,16 @@
   flex-direction: column;
   position: relative;
   gap: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+    gap: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    gap: 33px;
+  }
 }
 
 .range__bar {
@@ -12,7 +22,17 @@
   position: absolute;
   top: -1px;
   height: 4px;
-  background-color: $primaryLighter;
+  background-color: $primary-lighter;
+  left: 0;
+  width: 241px;
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+  }
 }
 
 .range__toggle {
@@ -21,8 +41,8 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: $baseWhite;
-  border: solid 2px $primaryLighter;
+  background-color: $base-white;
+  border: solid 2px $primary-lighter;
   cursor: pointer;
 
   &::after {
@@ -48,15 +68,15 @@
 
     &::after {
       content: "";
-      background-color: rgba($basePrimary, 0.25);
+      background-color: rgba($base-primary, 0.25);
     }
   }
 
   &:active {
-    border-color: $basePrimary;
+    border-color: $base-primary;
 
     &::after {
-      background-color: $basePrimary;
+      background-color: $base-primary;
     }
   }
 }
@@ -74,18 +94,36 @@
     height: 2px;
     top: 18px;
     left: 135px;
-    background-color: $baseGrey;
+    background-color: $base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 220px;
+
+    &::after {
+      top: 20px;
+      left: 105px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 318px;
+
+    &::after {
+      top: 19px;
+      left: 155px;
+    }
   }
 }
 
 .range__input {
   width: 118px;
-  height: 38px;
+  min-height: 38px;
   padding: 7px 10px;
-  border: solid 2px $primaryLighter;
+  border: solid 2px $primary-lighter;
   border-radius: 4px;
-  background-color: $baseWhite;
-  color: $baseBlack;
+  background-color: $base-white;
+  color: $base-black;
   font-family: "Montserrat", "Tahoma", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -95,18 +133,29 @@
   cursor: pointer;
 
   &::placeholder {
-    color: $baseGrey;
+    color: $base-grey;
   }
 
   &:focus {
-    border-color: $primaryDarker;
+    border-color: $primary-darker;
   }
 
   &:disabled {
-    background-color: $lightestGrey;
-    border-color: $lightGrey;
-    color: $lightGrey;
+    background-color: $lightest-grey;
+    border-color: $light-grey;
+    color: $light-grey;
     cursor: default;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 93px;
+    min-height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    min-height: 38px;
+    padding: 6px 10px;
   }
 }
 
@@ -120,17 +169,25 @@
   position: relative;
   height: 2px;
   width: 280px;
-  background-color: $lightGrey;
+  background-color: $light-grey;
 
   &--disabled {
     .range__bar {
-      background-color: $baseGrey;
+      background-color: $base-grey;
     }
 
     .range__toggle {
       cursor: default;
-      background-color: $lightestGrey;
-      border-color: $baseGrey;
+      background-color: $lightest-grey;
+      border-color: $base-grey;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 217px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
   }
 }

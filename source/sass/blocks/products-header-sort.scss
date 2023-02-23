@@ -19,16 +19,16 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  color: $basePrimary;
-  background-color: $lightestGrey;
+  color: $base-primary;
+  background-color: $lightest-grey;
   cursor: pointer;
   border-radius: 4px;
 
   > option {
-    background-color: $baseWhite;
+    background-color: $base-white;
   }
 
   &:hover {
-    background-color: $baseSecondary;
+    background-color: $base-secondary;
   }
 }

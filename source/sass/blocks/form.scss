@@ -1,9 +1,39 @@
+.form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 227px 227px 227px;
+    column-gap: 21px;
+    row-gap: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 31px;
+  }
+}
+
 .form__buttons {
   display: flex;
   flex-direction: column;
   gap: 25px;
   margin: 0 auto;
   width: 160px;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+    flex-direction: row;
+    width: 316px;
+    gap: 30px;
+    margin: 0 0 0 180px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+    gap: 18px;
+    margin: 6px 0 0 0;
+  }
 }
 
 .form__button {
@@ -19,35 +49,56 @@
 
   &--submit {
     font-size: 13px;
-    color: $baseWhite;
-    background-color: $basePrimary;
+    color: $base-white;
+    background-color: $base-primary;
 
     &:disabled {
       cursor: default;
-      background-color: $baseGrey;
+      background-color: $base-grey;
     }
   }
 
   &--reset {
     font-size: 14px;
-    color: $basePrimary;
-    background-color: $baseWhite;
+    color: $base-primary;
+    background-color: $base-white;
 
     &:disabled {
       cursor: default;
-      background-color: $lightGrey;
-      color: $baseWhite;
+      background-color: $light-grey;
+      color: $base-white;
     }
   }
 
   &:hover,
   &:focus {
-    background-color: $primaryLighter;
-    color: $baseWhite;
+    background-color: $primary-lighter;
+    color: $base-white;
   }
 
   &:active {
-    color: $baseWhite;
-    background-color: $primaryDarker;
+    color: $base-white;
+    background-color: $primary-darker;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+    padding: 8px 0;
+
+    &--submit {
+      width: 148px;
+    }
+
+    &--reset {
+      width: 138px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--submit,
+    &--reset {
+      width: 150px;
+      padding: 9px 0;
+    }
   }
 }

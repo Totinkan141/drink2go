@@ -14,4 +14,22 @@
   &--country {
     margin-bottom: 30px;
   }
+
+  @media (min-width: $tablet-width) {
+    &--price,
+    &--sort,
+    &--country {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+
+    &--price,
+    &--sort,
+    &--country {
+      margin: 0;
+    }
+  }
 }
