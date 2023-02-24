@@ -17,3 +17,20 @@ navToggle.addEventListener("click", function () {
     navMain.classList.add("navigation--closed");
   }
 });
+
+
+/* swiper */
+
+const swiper = new Swiper(".new-slider", {
+  sliderPerView: 1,
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

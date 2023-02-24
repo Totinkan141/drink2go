@@ -39,7 +39,11 @@
 }
 
 .catalog__filter {
-  margin-bottom: 38px;
+  margin: 0 0 38px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 41px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-row: 2 / 3;

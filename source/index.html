@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
-
 </head>
 
 <body>
@@ -24,13 +23,19 @@
       </a>
       <nav class="navigation navigation--secondary navigation--closed navigation--nojs">
         <ul class="navigation__list">
-          <li class="navigation__item navigation__item--user-enter">
-            <a class="navigation__link" href="user-enter.html">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--user" href="user-enter.html">
+              <svg class="navigation__icon navigatio__icon--user-enter" width="16" height="16">
+                <use xlink:href="img/icons/stack.svg#user-profile"></use>
+              </svg>
               <span>Войти</span>
             </a>
           </li>
-          <li class="navigation__item navigation__item--user-cart">
-            <a class="navigation__link" href="user-cart.html">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--user" href="user-cart.html">
+              <svg class="navigation__icon" width="16" height="16">
+                <use xlink:href="img/icons/stack.svg#user-cart"></use>
+              </svg>
               <span>Корзина</span>
             </a>
           </li>
@@ -69,26 +74,89 @@
     </div>
   </header>
   <main class="page-main">
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
+
+    <section class="page-main__new new">
+      <div class="new__container">
+        <h2 class="visually-hidden">Список новинок</h2>
+        <!-- Слайдер  -->
+        <div class="new__slider">
+          <div class="swiper new-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide new-slide new-slide--flat">
+                <div class="new-slide__image">
+                  <img src="./img/swiper/flat_white_img@1x-1.png" alt="" width="280" height="280">
+                </div>
+                <div class="new-slide__text">
+                  <p class="new-slide__badge">Новинка!</p>
+                  <h3 class="new-slide__title">Декаф Флэт Уайт</h3>
+                  <p class="new-slide__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным
+                    фермерским молоком —
+                    то,
+                    что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                  <div class="new-slide__order">
+                    <div class="new-slide__price">
+                      <span class="new-slide__old-price">295₽</span>
+                      <span class="new-slide__current-price">225₽</span>
+                    </div>
+                    <button class="new-slide__order-button button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide new-slide new-slide--lavender">
+                <div class="new-slide__image">
+                  <img src="./img/swiper/lavender_img@1x-1.png" alt="" width="280" height="280">
+                </div>
+                <div class="new-slide__text">
+                  <p class="new-slide__badge">Новинка!</p>
+                  <h3 class="new-slide__title">Лавандовый Латте</h3>
+                  <p class="new-slide__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы
+                    и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                  <div class="new-slide__order">
+                    <div class="new-slide__price">
+                      <span class="new-slide__old-price">285₽</span>
+                      <span class="new-slide__current-price">265₽</span>
+                    </div>
+                    <button class="new-slide__order-button button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide new-slide new-slide--espresso">
+                <div class="new-slide__image">
+                  <img src="./img/swiper/espresso_img@1x-1.png" alt="" width="280" height="280">
+                </div>
+                <div class="new-slide__text">
+                  <p class="new-slide__badge">Новинка!</p>
+                  <h3 class="new-slide__title">Тройной Эспрессо</h3>
+                  <p class="new-slide__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                  <div class="new-slide__order">
+                    <div class="new-slide__price">
+                      <span class="new-slide__old-price">395₽</span>
+                      <span class="new-slide__current-price">375₽</span>
+                    </div>
+                    <button class="new-slide__order-button button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="new__buttons">
+            <button class="swiper-button-prev new__button button new__button--prev">
+              <svg width="20" height="20">
+                <use xlink:href="img/icons/stack.svg#slider-arrow"></use>
+              </svg>
+            </button>
+            <button class="swiper-button-next new__button button new__button--next">
+              <svg width="20" height="20">
+                <use xlink:href="img/icons/stack.svg#slider-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
+    </section>
 
     <!--  Блок преимуществ -->
     <section class="page-main__advantages advantages">
@@ -379,7 +447,7 @@
                 с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
-                <button class="product__button button" disabled>
+                <button class="product__button button">
                   <svg class="product__button-icon" width="20" height="16">
                     <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
@@ -580,9 +648,10 @@
       </div>
     </div>
   </footer>
-  <script src="./js/index.js" defer></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="./js/map.js"></script>
+  <script src="./js/swiper.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

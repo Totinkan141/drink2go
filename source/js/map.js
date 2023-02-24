@@ -1,4 +1,3 @@
-/* Интерактивная карта leaflet*/
 const map = document.querySelector('.map');
 
 if (map.classList.contains('map--nojs')) {
