@@ -15,19 +15,16 @@
   position: relative;
   color: $base-grey;
 
-  &:hover,
-  &:focus {
-    > .developed-by__icon,
-    > .developed-by__name {
-      color: $base-primary;
-    }
+  &:hover > .developed-by__name,
+  &:focus > .developed-by__name,
+  &:hover > .developed-by__icon,
+  &:focus > .developed-by__icon {
+    color: $base-primary;
   }
 
-  &:active {
-    > .developed-by__icon,
-    > .developed-by__name {
-      color: $primary-darker;
-    }
+  &:active > .developed-by__icon,
+  &:active > .developed-by__name {
+    color: $primary-darker;
   }
 }
 

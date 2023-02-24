@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <title>Drink2Go: Интернет-магазин кофейных напитков</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <!-- Шапка старинцы -->
   <header class="header">
     <div class="header__container">
-      <a class="header__logo" href="index.html">
+      <a class="header__logo" href="index.html" aria-label="Ссылка на главную страницу.">
         <picture>
           <source media="(min-width: 1440px)" srcset="./img/logos/logo-full.svg">
           <source media="(min-width: 768px)" srcset="./img/logos/logo-short.svg">
@@ -24,7 +24,8 @@
       <nav class="navigation navigation--secondary navigation--closed navigation--nojs">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--user" href="user-enter.html">
+            <a class="navigation__link navigation__link--user" href="user-enter.html"
+              aria-label="Модальное окно авторизации.">
               <svg class="navigation__icon" width="16" height="16">
                 <use xlink:href="img/icons/stack.svg#user-profile"></use>
               </svg>
@@ -32,7 +33,8 @@
             </a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link--user" href="user-cart.html">
+            <a class="navigation__link navigation__link--user" href="user-cart.html"
+              aria-label="Модальное окно корзины товаров пользователя.">
               <svg class="navigation__icon" width="16" height="16">
                 <use xlink:href="img/icons/stack.svg#user-cart"></use>
               </svg>
@@ -41,7 +43,7 @@
           </li>
         </ul>
         <!-- Бургер кнопка -->
-        <button class="navigation__toggle" type="button">
+        <button class="navigation__toggle" type="button" aria-label="Кнопка бургер меню.">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </nav>
@@ -50,22 +52,22 @@
       <nav class="navigation navigation--main ">
         <ul class="navigation__list navigation__list--main">
           <li class="navigation__item">
-            <a href="#" class="navigation__link navigation__link--current">
+            <a href="#" class="navigation__link navigation__link--current" aria-label="Ссылка на главную страницу.">
               Главная
             </a>
           </li>
           <li class="navigation__item">
-            <a href="catalog.html" class="navigation__link">
+            <a href="#catalog" class="navigation__link" aria-label="Ссылка на страницу каталога.">
               Каталог
             </a>
           </li>
           <li class="navigation__item">
-            <a href="delivery.html" class="navigation__link">
+            <a href="delivery.html" class="navigation__link" aria-label="Ссылка на страницу доставки.">
               Доставка
             </a>
           </li>
           <li class="navigation__item">
-            <a href="about.html" class="navigation__link">
+            <a href="#about-us" class="navigation__link" aria-label="Ссылка на информацию о Go2Drink.">
               О нас
             </a>
           </li>
@@ -86,7 +88,22 @@
               <!-- Slides -->
               <div class="swiper-slide new-slide new-slide--flat">
                 <div class="new-slide__image">
-                  <img src="./img/swiper/flat_white_img@1x-1.png" alt="" width="280" height="280">
+                  <picture>
+                    <source media="(min-width: 1440px)" type="image/webp"
+                      srcset="./img/swiper/desktop/flat_white_img@1x.webp 1x, flat_white_img@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/webp"
+                      srcset="./img/swiper/tablet/flat_white_img@1x.webp 1x, flat_white_img@2x.webp 2x">
+                    <source media="(min-width: 320px)"
+                      srcset="./img/swiper/mobile/flat_white_img@1x.webp 1x, flat_white_img@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/swiper/desktop/flat_white_img@1x.png 1x, flat_white_img@2x.png 2x">
+                    <source media="(min-width: 768px)" type="image/webp"
+                      srcset="./img/swiper/tablet/flat_white_img@1x.png 1x, flat_white_img@2x.png 2x">
+                    <source media="(min-width: 320px)"
+                      srcset="./img/swiper/mobile/flat_white_img@1x.png 1x, flat_white_img@2x.png 2x">
+                    <img src="./img/swiper/mobile/flat_white_img@1x.png" width="280" height="280"
+                      alt="Банка кофе Декаф Флэт Уайт. Свежесваренный кофе без кофеина из Эфиопии">
+                  </picture>
                 </div>
                 <div class="new-slide__text">
                   <p class="new-slide__badge">Новинка!</p>
@@ -100,13 +117,28 @@
                       <span class="new-slide__old-price">295₽</span>
                       <span class="new-slide__current-price">225₽</span>
                     </div>
-                    <button class="new-slide__order-button button">Заказать</button>
+                    <button class="new-slide__order-button button" aria-label="Кнопка заказать товар.">Заказать</button>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide new-slide new-slide--lavender">
                 <div class="new-slide__image">
-                  <img src="./img/swiper/lavender_img@1x-1.png" alt="" width="280" height="280">
+                  <picture>
+                    <source media="(min-width: 1440px)" type="image/webp"
+                      srcset="./img/swiper/desktop/lavender_img@1x.webp 1x, lavender_img@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/webp"
+                      srcset="./img/swiper/tablet/lavender_img@1x.webp 1x, lavender_img@2x.webp 2x">
+                    <source media="(min-width: 320px)"
+                      srcset="./img/swiper/mobile/lavender_img@1x.webp 1x, lavender_img@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/swiper/desktop/lavender_img@1x.png 1x, lavender_img@2x.png 2x">
+                    <source media="(min-width: 768px)" type="image/webp"
+                      srcset="./img/swiper/tablet/lavender_img@1x.png 1x, lavender_img@2x.png 2x">
+                    <source media="(min-width: 320px)"
+                      srcset="./img/swiper/mobile/lavender_img@1x.png 1x, lavender_img@2x.png 2x">
+                    <img src="./img/swiper/mobile/lavender_img@1x.png" width="280" height="280"
+                      alt="Банка кофе Лавандовый Латте. Невероятное сочетание перуанской высокогорной арабики с молоком ламы">
+                  </picture>
                 </div>
                 <div class="new-slide__text">
                   <p class="new-slide__badge">Новинка!</p>
@@ -118,36 +150,54 @@
                       <span class="new-slide__old-price">285₽</span>
                       <span class="new-slide__current-price">265₽</span>
                     </div>
-                    <button class="new-slide__order-button button">Заказать</button>
+                    <button class="new-slide__order-button button" aria-label="Кнопка заказать товар.">Заказать</button>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide new-slide new-slide--espresso">
                 <div class="new-slide__image">
-                  <img src="./img/swiper/espresso_img@1x-1.png" alt="" width="280" height="280">
+                  <picture>
+                    <source media="(min-width: 1440px)" type="image/webp"
+                      srcset="./img/swiper/desktop/espresso_img@1x.webp 1x, espresso_img@2x.webp 2x">
+                    <source media="(min-width: 768px)" type="image/webp"
+                      srcset="./img/swiper/tablet/espresso_img@1x.webp 1x, espresso_img@2x.webp 2x">
+                    <source media="(min-width: 320px)"
+                      srcset="./img/swiper/mobile/espresso_img@1x.webp 1x, espresso_img@2x.webp 2x">
+                    <source media="(min-width: 1440px)"
+                      srcset="./img/swiper/desktop/espresso_img@1x.png 1x, espresso_img@2x.png 2x">
+                    <source media="(min-width: 768px)" type="image/webp"
+                      srcset="./img/swiper/tablet/espresso_img@1x.png 1x, espresso_img@2x.png 2x">
+                    <source media="(min-width: 320px)"
+                      srcset="./img/swiper/mobile/espresso_img@1x.png 1x, espresso_img@2x.png 2x">
+                    <img src="./img/swiper/mobile/espresso_img@1x.png" alt="Банка кофе Тройной Эспрессо. Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
+                    эспрессо из Колумбии покажет вам, что такое настоящая бодрость" width="280" height="280">
+                  </picture>
                 </div>
                 <div class="new-slide__text">
                   <p class="new-slide__badge">Новинка!</p>
                   <h3 class="new-slide__title">Тройной Эспрессо</h3>
-                  <p class="new-slide__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                  <p class="new-slide__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
+                    эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
                   <div class="new-slide__order">
                     <div class="new-slide__price">
                       <span class="new-slide__old-price">395₽</span>
                       <span class="new-slide__current-price">375₽</span>
                     </div>
-                    <button class="new-slide__order-button button">Заказать</button>
+                    <button class="new-slide__order-button button" aria-label="Кнопка заказать товар.">Заказать</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="new__buttons">
-            <button class="swiper-button-prev new__button button new__button--prev">
+            <button class="swiper-button-prev new__button button new__button--prev"
+              aria-label="Кнопка предыдущий слайд.">
               <svg width="20" height="20">
                 <use xlink:href="img/icons/stack.svg#slider-arrow"></use>
               </svg>
             </button>
-            <button class="swiper-button-next new__button button new__button--next">
+            <button class="swiper-button-next new__button button new__button--next"
+              aria-label="Кнопка следующий слайд.">
               <svg width="20" height="20">
                 <use xlink:href="img/icons/stack.svg#slider-arrow"></use>
               </svg>
@@ -208,7 +258,7 @@
       </div>
     </section>
     <!-- Каталог -->
-    <section class="page-main__catalog catalog">
+    <section class="page-main__catalog catalog" id="catalog">
       <div class="catalog__container">
         <div class="catalog__header">
           <h4 class="page-main__badge catalog__badge">Каталог</h4>
@@ -217,23 +267,27 @@
         <!-- Блок фильтров с формой -->
         <div class="catalog__filter filter">
           <!-- Форма блока с фильтерами каталога -->
-          <form class="filter__form form" id="catalog-form" action="https://echo.htmlacademy.ru">
+          <form class="filter__form form" id="catalog-form" action="https://echo.htmlacademy.ru"
+            aria-label="Форма с выбором фильтров.">
             <!-- Диапозон цены -->
             <fieldset class="filter__block filter-block">
               <legend class="filter-block__name filter-block__name--price">Цена</legend>
               <div class="filter-block__range range">
                 <div class="range__scale">
-                  <div class="range__bar">
-                    <button class="range__toggle range__toggle--min" type="button"></button>
-                    <button class="range__toggle range__toggle--max" type="button"></button>
+                  <div class="range__bar"> <!-- style="left: 0; width: 236px" - для js-->
+                    <button class="range__toggle range__toggle--min" type="button"
+                      aria-label="Кнопка ползунка для минимальной цены."></button>
+                    <button class="range__toggle range__toggle--max" type="button"
+                      aria-label="Кнопка ползунка для максимальной цены."></button>
                   </div>
                 </div>
                 <div class="range__inputs">
                   <label class="visually-hidden" for="price-min">Поле ввода минимальной цены</label>
-                  <input class="range__input" type="number" name="price-min" id="price-min" placeholder="0" min="0">
-                  <label class="visually-hidden" for="price-max">Поле ввода максивальной цены</label>
+                  <input class="range__input" type="number" name="price-min" id="price-min" placeholder="0" min="0"
+                    aria-label="Поле ввода минимальной цены.">
+                  <label class="visually-hidden" for="price-max">Поле ввода максимальной цены</label>
                   <input class="range__input" type="number" name="price-max" id="price-max" placeholder="900" min="0"
-                    value="900">
+                    value="900" aria-label="Поле ввода максимальной цены.">
                 </div>
               </div>
             </fieldset>
@@ -244,29 +298,32 @@
                 <ul class="sort__list">
                   <li class="sort__item">
                     <label class="sort__control">
-                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="no-matter"
-                        checked>
+                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="no-matter" checked
+                        aria-label="Радио-инпут выбирающая сорт молока: неважно.">
                       <span class="sort__radio-mask"></span>
                       <span class="sort__name">Неважно</span>
                     </label>
                   </li>
                   <li class="sort__item">
                     <label class="sort__control">
-                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="only-animal">
+                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="only-animal"
+                        aria-label="Радио-инпут выбирающая сорт молока: только животно.">
                       <span class="sort__radio-mask"></span>
                       <span class="sort__name">Только животное</span>
                     </label>
                   </li>
                   <li class="sort__item">
                     <label class="sort__control">
-                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="only-vegetable">
+                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="only-vegetable"
+                        aria-label="Радио-инпут выбирающая сорт молока: только растительное.">
                       <span class="sort__radio-mask"></span>
                       <span class="sort__name">Только растительное</span>
                     </label>
                   </li>
                   <li class="sort__item">
                     <label class="sort__control">
-                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="without" disabled>
+                      <input class="sort__input visually-hidden" type="radio" name="milk-sort" value="without" disabled
+                        aria-label="Радио-инпут выбирающая сорт молока: без молока.">
                       <span class="sort__radio-mask"></span>
                       <span class="sort__name">Без молока</span>
                     </label>
@@ -282,36 +339,39 @@
                   <li class="country__item">
                     <label class="country__control">
                       <input class="country__input visually-hidden" type="checkbox" name="country" value="Brazil"
-                        checked>
+                        checked aria-label="Чекбокс-инпут выбирающий страну произрастая: Бразилия.">
                       <span class="country__checkbox-mask"></span>
                       <span class="country__name">Бразилия</span>
                     </label>
                   </li>
                   <li class="country__item">
                     <label class="country__control">
-                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Ethiopia">
+                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Ethiopia"
+                        aria-label="Чекбокс-инпут выбирающий страну произрастания: Эфиопия.">
                       <span class="country__checkbox-mask"></span>
                       <span class="country__name">Эфиопия</span>
                     </label>
                   </li>
                   <li class="country__item">
                     <label class="country__control">
-                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Colombia">
+                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Colombia"
+                        aria-label="Чекбокс-инпут выбирающий страну произрастания: Колумбия.">
                       <span class="country__checkbox-mask"></span>
                       <span class="country__name">Колумбия</span>
                     </label>
                   </li>
                   <li class="country__item">
                     <label class="country__control">
-                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Costa-Rica">
+                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Costa-Rica"
+                        aria-label="Чекбокс-инпут выбирающий страну произрастания: Коста-Рика.">
                       <span class="country__checkbox-mask"></span>
                       <span class="country__name">Коста-Рика</span>
                     </label>
                   </li>
                   <li class="country__item">
                     <label class="country__control">
-                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Peru"
-                        disabled>
+                      <input class="country__input visually-hidden" type="checkbox" name="country" value="Peru" disabled
+                        aria-label="Чекбокс-инпут выбирающий страну произрастания: Перу.">
                       <span class="country__checkbox-mask"></span>
                       <span class="country__name">Перу</span>
                     </label>
@@ -321,8 +381,10 @@
             </fieldset>
             <!-- Кнопки взаимодействия с формой  -->
             <div class="form__buttons">
-              <button class="form__button form__button--submit button" type="submit">Применить фильтр</button>
-              <button class="form__button form__button--reset button" type="reset">Сбросить фильтр</button>
+              <button class="form__button form__button--submit button" type="submit"
+                aria-label="Кнопка формы для применения выбранных фильтров.">Применить фильтр</button>
+              <button class="form__button form__button--reset button" type="reset"
+                aria-label="Кнопка формы для сбрасывания выбранных фильтров.">Сбросить фильтр</button>
             </div>
           </form>
         </div>
@@ -332,8 +394,8 @@
           <div class="products__header-sort products-header-sort">
             <h3 class="products-header-sort__title">Сортировка:</h3>
             <label for="products-sort"></label>
-            <select class="products-header-sort__select" name="products-sort" id="products-sort" aria-label="Сортировка"
-              form="catalog-form">
+            <select class="products-header-sort__select" name="products-sort" id="products-sort"
+              aria-label="Сортировка." form="catalog-form">
               <option value="default">по умолчанию</option>
               <option value="expensive">сначала дорогие</option>
               <option value="cheap">сначала дешёвые</option>
@@ -356,7 +418,7 @@
                 с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
-                <button class="product__button button">
+                <button class="product__button button" aria-label="Добавить товар в корзину.">
                   <svg class="product__button-icon" width="20" height="16">
                     <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
@@ -378,7 +440,7 @@
               <p class="product__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
-                <button class="product__button button">
+                <button class="product__button button" aria-label="Добавить товар в корзину.">
                   <svg class="product__button-icon" width="20" height="16">
                     <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
@@ -401,7 +463,7 @@
                 с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
-                <button class="product__button button">
+                <button class="product__button button" aria-label="Добавить товар в корзину.">
                   <svg class="product__button-icon" width="20" height="16">
                     <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
@@ -424,7 +486,7 @@
                 с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
-                <button class="product__button button">
+                <button class="product__button button" aria-label="Добавить товар в корзину.">
                   <svg class="product__button-icon" width="20" height="16">
                     <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
@@ -447,7 +509,7 @@
                 с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
-                <button class="product__button button">
+                <button class="product__button button" aria-label="Добавить товар в корзину.">
                   <svg class="product__button-icon" width="20" height="16">
                     <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
@@ -470,7 +532,7 @@
                 с&nbsp;натуральным фермерским молоком</p>
               <div class="product__buy">
                 <span class="product__price">225₽</span>
-                <button class="product__button button">
+                <button class="product__button button" aria-label="Добавить товар в корзину.">
                   <svg class="product__button-icon" width="20" height="16">
                     <use xlink:href="img/icons/stack.svg#add-to-cart-icon"></use>
                   </svg>
@@ -480,7 +542,8 @@
             </li>
           </ul>
           <div class="products__pagination pagination">
-            <button class="pagination__button button pagination__button--to-previous">
+            <button class="pagination__button button pagination__button--to-previous"
+              aria-label="Кнопка пагинации перелистывающая спикос католога на предыдущую страницу.">
               <svg class="pagination__arrow" width="6" height="10">
                 <use xlink:href="img/icons/stack.svg#pagination-arrow"></use>
               </svg>
@@ -488,16 +551,20 @@
             </button>
             <ul class="pagination__list">
               <li class="pagination__item">
-                <a href="#" class="pagination__link">1</a>
+                <a href="#" class="pagination__link"
+                  aria-label="Кнопка пагинации переключающая на 1 страницу каталога.">1</a>
               </li>
               <li class="pagination__item">
-                <a href="#" class="pagination__link pagination__link--current">2</a>
+                <a href="#" class="pagination__link pagination__link--current"
+                  aria-label="Кнопка пагинации переключающая на 2 страницу каталога.">2</a>
               </li>
               <li class="pagination__item">
-                <a href="#" class="pagination__link">3</a>
+                <a href="#" class="pagination__link"
+                  aria-label="Кнопка пагинации переключающая на 3 страницу каталога.">3</a>
               </li>
             </ul>
-            <button class="pagination__button button pagination__button--to-next">
+            <button class="pagination__button button pagination__button--to-next"
+              aria-label="Кнопка пагинации перелистывающая спикос католога на следующую страницу.">
               <svg class="pagination__arrow" width="6" height="10">
                 <use xlink:href="img/icons/stack.svg#pagination-arrow"></use>
               </svg>
@@ -530,11 +597,11 @@
     </section>
   </main>
   <!-- Подвал сайта -->
-  <footer class="page-footer">
+  <footer class="page-footer" id="about-us">
     <div class="page-footer__container">
       <!-- Здесь лежит логотип и социльные контакты -->
       <div class="page-footer__social social">
-        <a class="social__logo" href="index.html">
+        <a class="social__logo" href="index.html" aria-label="Ссылка на главную.">
           <picture>
             <source media="(min-width: 768px)" srcset="./img/logos/logo-full.svg">
             <img src="./img/logos/logo-short.svg" width="82" height="36" alt="Drink2Go">
@@ -544,23 +611,29 @@
 
         <!-- Список социльаных контактов -->
         <ul class="social-links">
-          <li class="social-links__link">
-            <span class="visually-hidden">Наша группа в&nbsp;ВК</span>
-            <svg class="social-links__icon" width="20" height="20">
-              <use xlink:href="img/icons/stack.svg#vk-icon"></use>
-            </svg>
+          <li class="social-links__item">
+            <a href="#" class="social-links__link" aria-label="Ссылка на нашу группу в ВК.">
+              <span class="visually-hidden">Наша группа в&nbsp;ВК</span>
+              <svg class="social-links__icon" width="20" height="20">
+                <use xlink:href="img/icons/stack.svg#vk-icon"></use>
+              </svg>
+            </a>
           </li>
-          <li class="social-links__link">
-            <span class="visually-hidden">Наш Pinterest</span>
-            <svg class="social-links__icon" width="22" height="22">
-              <use xlink:href="img/icons/stack.svg#pinterest-icon"></use>
-            </svg>
+          <li class="social-links__item">
+            <a href="#" class="social-links__link" aria-label="Ссылка на наш Pinterest.">
+              <span class="visually-hidden">Наш Pinterest</span>
+              <svg class="social-links__icon" width="22" height="22">
+                <use xlink:href="img/icons/stack.svg#pinterest-icon"></use>
+              </svg>
+            </a>
           </li>
-          <li class="social-links__link">
-            <span class="visually-hidden">Наша группа в&nbsp;ОК</span>
-            <svg class="social-links__icon" width="20" height="20">
-              <use xlink:href="img/icons/stack.svg#ok-icon"></use>
-            </svg>
+          <li class="social-links__item">
+            <a href="#" class="social-links__link" aria-label="Ссылка на нашу группу в ОК.">
+              <span class="visually-hidden">Наша группа в&nbsp;ОК</span>
+              <svg class="social-links__icon" width="20" height="20">
+                <use xlink:href="img/icons/stack.svg#ok-icon"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
@@ -650,7 +723,7 @@
   </footer>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="./js/map.js"></script>
-  <script src="./js/swiper.js"></script>
+  <script src="./js/swiper-bundle.js"></script>
   <script src="./js/index.js"></script>
 </body>
 

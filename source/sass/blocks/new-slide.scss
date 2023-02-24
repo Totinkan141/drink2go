@@ -1,5 +1,5 @@
 .new-slide {
-  width: 100%;
+  width: $mobile-start;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    width: $tablet-width;
     flex-direction: column-reverse;
     background-size: 768px 640px;
     padding: 60px 80px 0;
@@ -58,6 +59,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: $desktop-width;
     flex-direction: row;
     gap: 30px;
     text-align: left;

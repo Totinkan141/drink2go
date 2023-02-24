@@ -53,7 +53,6 @@
 
 /* Поведение радио кнопок в фильтре каталога*/
 .sort__input {
-  // радио - выбран
   &:checked + .sort__radio-mask {
     border-color: $primary-lighter;
 

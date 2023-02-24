@@ -54,14 +54,12 @@
 }
 
 .country__input {
-  &:hover,
-  &:focus {
-    ~ .country__checkbox-mask {
-      background-color: rgba($base-primary, 0.25);
-      border: solid 2px $primary-lighter;
-    }
+  &:hover ~ .country__checkbox-mask,
+  &:focus ~ .country__checkbox-mask {
+    background-color: rgba($base-primary, 0.25);
+    border: solid 2px $primary-lighter;
 
-    ~ .country__checkbox-mask::after {
+    &::after {
       top: 0;
       left: 0;
     }
