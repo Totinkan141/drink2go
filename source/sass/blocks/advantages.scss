@@ -15,12 +15,12 @@
   @media (min-width: $tablet-width) {
     width: $tablet-width;
     gap: 60px;
-    padding: 50px 30px 60px;
+    padding: 60px 30px 60px;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
-    padding: 50px 40px 60px;
+    padding: 102px 40px 60px;
     gap: 78px;
   }
 }

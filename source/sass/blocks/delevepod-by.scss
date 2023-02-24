@@ -15,13 +15,19 @@
   position: relative;
   color: $base-grey;
 
-  &:hover ~ .developed-by__icon,
-  &:focus ~ .developed-by__icon {
-    color: $base-primary;
+  &:hover,
+  &:focus {
+    > .developed-by__icon,
+    > .developed-by__name {
+      color: $base-primary;
+    }
   }
 
-  &:active ~ .developed-by__icon {
-    color: $primary-darker;
+  &:active {
+    > .developed-by__icon,
+    > .developed-by__name {
+      color: $primary-darker;
+    }
   }
 }
 
