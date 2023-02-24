@@ -204,10 +204,6 @@
   &--user:hover,
   &--user:focus {
     color: $base-primary;
-    
-    // > .navigation__icon {
-    //   color: currentColor;
-    // }
   }
 
   @media (min-width: $tablet-width) {
