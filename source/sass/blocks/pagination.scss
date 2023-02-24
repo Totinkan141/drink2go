@@ -22,6 +22,10 @@
   background-color: $base-white;
   border-radius: 4px;
 
+  span {
+    color: inherit;
+  }
+
   &--to-next {
     transform: rotate(180deg);
   }

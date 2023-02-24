@@ -1,5 +1,6 @@
 .form {
   @media (min-width: $tablet-width) {
+    max-width: 728px;
     display: grid;
     grid-template-columns: 227px 227px 227px;
     column-gap: 21px;
@@ -21,8 +22,7 @@
   width: 160px;
 
   @media (min-width: $tablet-width) {
-    grid-row: 2 / 3;
-    grid-column: 1 / 5;
+    grid-column: 1 / 4;
     flex-direction: row;
     width: 316px;
     gap: 30px;
